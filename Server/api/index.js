@@ -4,9 +4,9 @@ import items from "./data/products.json" assert { type: "json" };
 import mongoose from "mongoose";
 import dotenv from "dotenv"
 import cors from 'cors'
-import connectDatabase from "./config/mongodb.js";
-import ImportData from "./data/dataimport.js";
-import Product from "./Models/productmodel.js";
+import connectDatabase from "../config/mongodb.js";
+import ImportData from "../data/dataimport.js";
+import Product from "../Models/productmodel.js";
 const products = items
 dotenv.config({path:"../.env"});
 connectDatabase()
