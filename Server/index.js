@@ -1,6 +1,6 @@
 
 import express from "express";
-import items from "./data/products.json" with {type:"json"};
+import items from "./data/products.json";
 import fs from "fs"
 import mongoose from "mongoose";
 import dotenv from "dotenv"
@@ -16,7 +16,7 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 app.use("/api/users",ImportData);
-app.delete("/api/products/remove/:id",(req,res)=>{
+app.delete("/api/products/remove/:id",async(req,res)=>{
     const id = req.params.id * 1;
     const objtodelete= items.find((p)=>p.id===id)
     const index = items.indexOf(objtodelete)   
@@ -283,7 +283,7 @@ else{
 })
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
-app.post("/api/products/add",(req,res)=>{
+app.post("/api/products/add",async(req,res)=>{
     if(JSON.stringify(req.body) != "{}" && req.body.name!="" && req.body.name !=null&&req.body.description!="" && req.body.description !=null&&req.body.categorie!="" && req.body.categorie !=null){
         const name = req.body.name.replace(/[^a-zA-Z ]/g, '')
         const description= req.body.description.replace(/[^a-zA-Z ]/g, '')
@@ -322,7 +322,7 @@ else{
    res.send("Invalid JSON Object")
     
 })
-app.post("/api/product/add",(req,res)=>{})
+app.post("/api/product/add",async(req,res)=>{})
 app.get("/",(req,res)=>{
     res.send("API Is Running....");
 })
