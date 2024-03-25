@@ -8,7 +8,7 @@ import cors from 'cors'
 import bodyParser from "body-parser";
 import connectDatabase from "../config/mongodb.js";
 import ImportData from "../data/dataimport.js";
-import Product from "../Models/productmodel.js";
+import Product from "./productmodel.js";
 const products = items
 dotenv.config({path:"../.env"});
 connectDatabase()
