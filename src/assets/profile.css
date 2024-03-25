@@ -1,0 +1,69 @@
+*{
+    margin: 0 ;
+    padding: 0;
+}
+.profile-section{
+    position: relative;
+    top: 700px;
+    display: grid;
+    background-color: #26282A   ;
+    padding: 40px 40px 100px 40px;
+    border-radius: .3em;
+    box-shadow: 0 0 3px black;
+    margin: 30px;
+}
+.profile-section .profile-title{
+    position: relative;
+     margin: 0 auto;
+     top: -200px;
+     border-radius: .1em;
+     font-size: 70px;
+     font-weight: 300;
+     background-color: rgba(253, 116, 48, 0.348) ;
+     box-shadow: inset 0 0 5px rgb(253, 116, 48);
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+     color: black;
+     border: 1px solid rgb(253, 116, 48);
+     padding: 10px;
+}
+.profile-section .profile-container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    margin-left: 50px;
+    
+}
+.profile-section .profile-container .profileimg img{
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 10px black;
+    border: 1px solid rgb(253, 116, 48);
+    border-radius: 10em;
+}
+.profile-section .profile-container .profileinfo{
+    display: grid;
+    gap: 50px;
+    text-align:left;
+
+}
+.profile-section .profile-container .profileinfo h2{
+    font-weight: 300;
+    font-family: sans-serif;
+    color: white;
+}
+.profile-section .profile-container .profileinfo h2 span{
+    position: relative;
+    color: rgb(253, 116, 48);
+
+}
+.profile-section .profile-container .profileinfo h2 span::before{
+position: absolute;
+content: "";
+bottom:-5px;
+left: 0;
+background-color: rgb(253, 116, 48);
+height: 1px;
+width: 100%;
+}

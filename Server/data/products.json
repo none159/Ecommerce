@@ -1,0 +1,644 @@
+[
+
+    {
+        "id":1,
+        "name":"golden necklace",
+        "description":"Thin, Not Heavy and Golden Necklace for Men",
+        "categorie":"accessory",
+        "img":"/images/Accessories/alberto-rodriguez-santana-EU-KuIDEbKU-unsplash.jpg",
+        "price":"20$",
+        "onarrival":true,
+        "datearrival":"july 2025"
+
+    },
+    {
+        "id":2,
+        "name":"golden ring necklace",
+        "description":"Thin, Not Heavy and Golden Ring Nekclace for Women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/andie-gomez-acebo-sEq4onJnWrI-unsplash.jpg",
+        "price":"20$",
+        "trending":true
+
+    },
+    {
+        "id":3,
+        "name":"brown yellow sun glasses",
+        "description":"brown yellow sun glasses for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/apostolos-vamvouras-Pp_nVOuJMTU-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":4,
+        "name":"red bag",
+        "description":"red bag for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/arno-senoner-oCXVxwTFwqE-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":5,
+        "name":"colorful bag",
+        "description":"lovely colorful bag with many shapes and golden accessories for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/arno-senoner-ooj5VfXq5o8-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":6,
+        "name":"brown bag",
+        "description":"small brown bag",
+        "categorie":"accessory",
+        "img":"/images/Accessories/audrey-shattuck-O2c-AiowrCE-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":7,
+        "name":"brown leather bag",
+        "description":"Real leather brown bag for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/aylin-cobanoglu-5A9cFNtWav0-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":8,
+        "name":"green sun glasses",
+        "description":"green sun glasses for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/farah-samy-xU69-CkS67E-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":9,
+        "name":"double golden necklace",
+        "description":"double Thin, Not Heavy and Golden Necklace for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/jasmin-chew-WKD2vIe8Rb0-unsplash.jpg",
+        "price":"20$"
+        ,"trending":true
+
+    },
+    {
+        "id":10,
+        "name":"three golden necklace",
+        "description":"three golden necklace,Thin and Not Heavy for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/jasmin-chew-WKD2vIe8Rb0-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":11,
+        "name":"double short necklace",
+        "description":"double short necklace for women",
+        "categorie":"accessory",
+        "slider":true,
+        "img":"/images/Accessories/kateryna-hliznitsova-ceSCZzjTReg-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":12,
+        "name":"Red channel bag",
+        "description":"red channel bag for women",
+        "categorie":"accessory",
+        "sale":true,
+        "percentage":"50%",
+        "img":"/images/Accessories/laura-chouette-b7kMR1VYAJc-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":13,
+        "name":"gray and black Prada bag",
+        "description":"gray and black small prada bag",
+        "categorie":"accessory",
+        "slider":true,
+        "img":"/images/Accessories/laura-chouette-G5rpelySmuA-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":14,
+        "name":"golden watch",
+        "description":"golden watch for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/laura-chouette-hduhQOw3awk-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":15,
+        "name":"yellow and black shades glasses",
+        "description":"yellow and black shades glasses for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/laura-chouette-ilBfUbLnSXE-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":16,
+        "name":"medium black and gray prada bag",
+        "description":"medium black and gray prada bag for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/laura-chouette-N_N-W32xHMc-unsplash.jpg",
+        "price":"20$",
+        "trending":true
+
+    },
+    {
+        "id":17,
+        "name":"liesara black bag",
+        "description":" black liesara bag for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/leisara-studio-396JySTQiqA-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":18,
+        "name":"golden bracelet",
+        "description":"thick golden bracelet for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/lum3n-lbEL705stOw-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":19,
+        "name":"lether black watch",
+        "description":"lether black watch for Men",
+        "categorie":"accessory",
+        "img":"/images/Accessories/michael-soledad-WCfChKPD2eg-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":20,
+        "name":"golden bracelet set",
+        "description":"golden bracelet set for women",
+        "categorie":"accessory",
+        "img":"/images/Accessories/mike-von-qsJ5itg93WY-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":21,
+        "name":"metal black watch",
+        "description":"metal black watch for Men",
+        "categorie":"accessory",
+        "img":"/images/Accessories/saif71-com-VIKdvmGUhq8-unsplash.jpg",
+        "price":"20$"
+
+    },
+    {
+        "id":22,
+        "name":"iphone 5",
+        "description":"brand new iphone 5",
+        "categorie":"electronics",
+        "img":"/images/electronics/amir-hanna-sweUF7FcyP4-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":23,
+        "name":"macbook pro and iphone",
+        "description":"brand new macbook pro and iphone",
+        "categorie":"electronics",
+        "img":"/images/electronics/ben-kolde-FaPxZ88yZrw-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":24,
+        "name":"latest iphone",
+        "description":"brand new latest iphone",
+        "categorie":"electronics",
+        "img":"/images/electronics/charlesdeluvio-6OF-Ly-5oJY-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":25,
+        "name":"macbook pro",
+        "description":"brand new macbook pro",
+        "categorie":"electronics",
+        "img":"/images/electronics/clement-helardot-95YRwf6CNw8-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":26,
+        "name":"nintendo",
+        "description":"brand new nintendo",
+        "categorie":"electronics",
+        "img":"/images/electronics/eugene-chystiakov-98NV8tq6_V8-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":27,
+        "name":"mac desktop pc",
+        "description":"minimal mac desktop pc with (pc and screen combined)",
+        "categorie":"electronics",
+        "img":"/images/electronics/gabriel-beaudry-5X5dCf4Pp44-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":28,
+        "name":"iphone",
+        "description":"brand new iphone",
+        "categorie":"electronics",
+        "img":"/images/electronics/jenny-ueberberg-brfcpBfCebY-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":29,
+        "name":"macbook pro",
+        "description":"brand new macbook pro",
+        "categorie":"electronics",
+        "img":"/images/electronics/kari-shea-1SAnrIxw5OY-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":30,
+        "name":"latest iphone",
+        "description":"brand new latest iphone",
+        "categorie":"electronics",
+        "img":"/images/electronics/kayra-sercan-rd183eSRVYM-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":31,
+        "name":"excalibur laptop",
+        "description":"brand new excalibur laptop",
+        "categorie":"electronics",
+        "img":"/images/electronics/onur-binay-auf3GwpVaOM-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":32,
+        "name":"latest iphone",
+        "description":"brand new latest iphone",
+        "categorie":"electronics",
+        "img":"/images/electronics/oscar-nord-8l9VxXI28tY-unsplash.jpg",
+        "price":"20$",
+        "onarrival":true,
+        "datearrival":"june 2025"
+    }
+    ,
+    {
+        "id":33,
+        "name":"latest iphone",
+        "description":"brand new latest iphone",
+        "categorie":"electronics",
+        "img":"/images/electronics/rahul-chakraborty-xsGxhtAsfSA-unsplash.jpg",
+        "price":"20$",
+        "onarrival":true,
+        "datearrival":"july 2025"
+    }
+    ,
+    {
+        "id":34,
+        "name":"customized latest iphone",
+        "description":"brand new latest costumized iphone",
+        "categorie":"electronics",
+        "img":"/images/electronics/rishabh-malhotra-83ypHTv6J2M-unsplash.jpg",
+        "price":"20$",
+        "onarrival":true,
+        "datearrival":"july 2024"
+    },
+    {
+        "id":35,
+        "name":"latest iphone",
+        "description":"brand new latest iphone",
+        "categorie":"electronics",
+        "img":"/images/electronics/walling-52H5Nfi5WiE-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":36,
+        "name":"stylish jean",
+        "description":"stylish jean for women",
+        "categorie":"Pants",
+        "img":"/images/Pants/alicia-petresc-BciCcl8tjVU-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":37,
+        "name":"women pants",
+        "description":"comfortable pants for women",
+        "categorie":"Pants",
+        "img":"/images/Pants/engin-akyurt-5raPrOhbKQo-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":38,
+        "name":"normal jean",
+        "description":"normal jean for women",
+        "categorie":"Pants",
+        "img":"/images/Pants/engin-akyurt-ahs1R32GG9Y-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":39,
+        "name":"normal jean",
+        "description":"normal jean for men",
+        "categorie":"Pants",
+        "img":"/images/Pants/ivan-bogdanov-17qC7l19hMI-unsplash.jpg",
+        "price":"20$",
+        "onarrival":true,
+        "datearrival":"june 2024"
+    },
+    {
+        "id":40,
+        "name":"normal jean",
+        "description":"normal jean for men",
+        "categorie":"Pants",
+        "img":"/images/Pants/jason-leung-EtOMMg1nSR8-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":41,
+        "name":"6 pockets jean",
+        "description":"6 pocket jean for men",
+        "categorie":"Pants",
+        "img":"/images/Pants/kal-visuals-d5GlpSOAzzg-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":42,
+        "name":"slim short jean",
+        "description":"slim short jeans for women",
+        "categorie":"Pants",
+        "img":"/images/Pants/laura-chouette-yPZQAzuySJk-unsplash.jpg",
+        "price":"20$",
+        "onarrival":true,
+        "datearrival":"july 2025"
+    },
+    {
+        "id":43,
+        "name":"comfortable pants",
+        "description":"comfortable pant for work for women",
+        "categorie":"Pants",
+        "img":"/images/Pants/mark-adriane--uJ3N7HLiEg-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":44,
+        "name":"wide pants",
+        "description":"wide pants for men",
+        "categorie":"Pants",
+        "img":"/images/Pants/matthew-moloney-5NPId7L1_p4-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":45,
+        "name":"men pants",
+        "description":"men pants for vests",
+        "categorie":"Pants",
+        "img":"/images/Pants/matthew-moloney-BBH3z2Jv0WQ-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":46,
+        "name":"dark blue jean",
+        "description":"dark blue jeans for men",
+        "categorie":"Pants",
+        "img":"/images/Pants/matthew-moloney-YeGao3uk8kI-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":47,
+        "name":"stylish pants",
+        "description":"stylish comfortable jeans for women",
+        "categorie":"Pants",
+        "img":"/images/Pants/nagy-arnold-APpHYr9TcMA-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":48,
+        "name":"slim jeans",
+        "description":"slim jeans for men",
+        "categorie":"Pants",
+        "img":"/images/Pants/nathan-dumlao-nRziNWCVVEU-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":49,
+        "name":"beige pants",
+        "description":"bottom slim beige pants for men",
+        "categorie":"Pants",
+        "img":"/images/Pants/redd-f-jC7nVH_Sw8k-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":50,
+        "name":"black nickey",
+        "description":"brand new black nickey",
+        "categorie":"shoes",
+        "img":"/images/shoes/andres-jasso-PqbL_mxmaUE-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":51,
+        "name":"red nickey",
+        "description":"brand new red nickey",
+        "categorie":"shoes",
+        "img":"/images/shoes/domino-164_6wVEHfI-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":52,
+        "name":"gray nickey",
+        "description":"brand new gray nickey",
+        "categorie":"shoes",
+        "img":"/images/shoes/imani-bahati-LxVxPA1LOVM-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":53,
+        "name":"colorful shoes",
+        "description":"sport color mix shoes",
+        "categorie":"shoes",
+        "img":"/images/shoes/irene-kredenets-dwKiHoqqxk8-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":54,
+        "name":"white nickey",
+        "description":"brand new white nickey",
+        "categorie":"shoes",
+        "img":"/images/shoes/joseph-barrientos-4qSb_FWhHKs-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":55,
+        "name":"white and orange nickey",
+        "description":"brand new white and orange color combo nickey",
+        "categorie":"shoes",
+        "img":"/images/shoes/luis-felipe-lins-LG88A2XgIXY-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":56,
+        "name":"brown and black nickey",
+        "description":"brand new brown and black color combo nickey",
+        "categorie":"shoes",
+        "img":"/images/shoes/maksim-larin-NOpsC3nWTzY-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":57,
+        "name":"gray yeezy",
+        "description":"brand new gray yeezy",
+        "categorie":"shoes",
+        "img":"/images/shoes/martin-katler-Y4fKN-RlMV4-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":58,
+        "name":"colorful high heels",
+        "description":"colorful with flower design high heels for women",
+        "categorie":"shoes",
+        "img":"/images/shoes/mohammad-metri-E-0ON3VGrBc-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":59,
+        "name":"white brown shoes",
+        "description":"white brown shoes",
+        "categorie":"shoes",
+        "img":"/images/shoes/mojtaba-fahiminia-t4g1gctAaKk-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":60,
+        "name":"colorful shoes",
+        "description":"colorful sport shoes for men",
+        "categorie":"shoes",
+        "img":"/images/shoes/omar-prestwich-jLEGurepDco-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":61,
+        "name":"red and white vans",
+        "description":"brand new red and white vans",
+        "categorie":"shoes",
+        "img":"/images/shoes/paul-gaudriault-a-QH9MAAVNI-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":62,
+        "name":"colorful nickey",
+        "description":"brand new colorful nickey for women",
+        "categorie":"shoes",
+        "img":"/images/shoes/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":63,
+        "name":"new green white and black nickey",
+        "description":"brand new nickey",
+        "categorie":"shoes",
+        "img":"/images/shoes/usama-akram-kP6knT7tjn4-unsplash.jpg",
+        "price":"20$"
+    } ,{
+        "id":64,
+        "name":"measure tape",
+        "description":"brand new measure tape",
+        "categorie":"tools",
+        "img":"/images/tools/domino-164_6wVEHfI-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":65,
+        "name":"gray nickey",
+        "description":"brand new gray nickey",
+        "categorie":"tools",
+        "img":"/images/tools/imani-bahati-LxVxPA1LOVM-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":66,
+        "name":"colorful tools",
+        "description":"sport color mix tools",
+        "categorie":"tools",
+        "img":"/images/tools/irene-kredenets-dwKiHoqqxk8-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":67,
+        "name":"white nickey",
+        "description":"brand new white nickey",
+        "categorie":"tools",
+        "img":"/images/tools/joseph-barrientos-4qSb_FWhHKs-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":68,
+        "name":"white and orange nickey",
+        "description":"brand new white and orange color combo nickey",
+        "categorie":"tools",
+        "img":"/images/tools/luis-felipe-lins-LG88A2XgIXY-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":69,
+        "name":"brown and black nickey",
+        "description":"brand new brown and black color combo nickey",
+        "categorie":"tools",
+        "img":"/images/tools/maksim-larin-NOpsC3nWTzY-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":70,
+        "name":"gray yeezy",
+        "description":"brand new gray yeezy",
+        "categorie":"tools",
+        "img":"/images/tools/martin-katler-Y4fKN-RlMV4-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":71,
+        "name":"colorful high heels",
+        "description":"colorful with flower design high heels for women",
+        "categorie":"tools",
+        "img":"/images/tools/mohammad-metri-E-0ON3VGrBc-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":72,
+        "name":"white brown tools",
+        "description":"white brown tools",
+        "categorie":"tools",
+        "img":"/images/tools/mojtaba-fahiminia-t4g1gctAaKk-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":73,
+        "name":"colorful tools",
+        "description":"colorful sport tools for men",
+        "categorie":"tools",
+        "img":"/images/tools/omar-prestwich-jLEGurepDco-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":74,
+        "name":"red and white vans",
+        "description":"brand new red and white vans",
+        "categorie":"tools",
+        "img":"/images/tools/paul-gaudriault-a-QH9MAAVNI-unsplash.jpg",
+        "price":"20$"
+    },
+    {
+        "id":75,
+        "name":"colorful nickey",
+        "description":"brand new colorful nickey for women",
+        "categorie":"tools",
+        "img":"/images/tools/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg",
+        "price":"20$"
+    }
+]

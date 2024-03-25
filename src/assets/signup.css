@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.Signup-section{
+    position: relative;
+    top: 600px;
+}
+.Signup-section .Signup-container{
+    display: grid;
+    place-items: center;
+    gap: 50px;
+    transform: scale(1.3);
+}
+.Signup-section .Signup-container h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    border: 1px solid rgb(160, 10, 10);
+    padding: 10px;
+}
+.Signup-section .Signup-container .Signup-form{
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 10px black;
+    gap: 30px;
+    border-radius: .3em;
+    background-color: rgb(240, 238, 238);
+    padding: 20px 30px;
+}
+.Signup-section .Signup-container .Signup-form h3{
+    font-family: sans-serif;
+    font-weight: 300;
+}
+.Signup-section .Signup-container .Signup-form input{
+    padding: 10px;
+    width: 300px;
+    outline: none;
+   border-radius: .2em;
+}
+.Signup-section .Signup-container .Signup-form input:focus{
+    border: 1px solid rgb(160, 10, 10);
+}
+.Signup-section .Signup-container .Signup-form button{
+    padding: 10px 20px;
+    border: none;
+    background-color: #222222;
+    border-radius: .2em;
+    cursor: pointer;
+    color: rgb(160, 10, 10);
+    transition: 150ms ease-in-out;
+}
+.Signup-section .Signup-container .Signup-form button:hover{
+    color: white;
+    background-color: rgb(160, 10, 10);
+}

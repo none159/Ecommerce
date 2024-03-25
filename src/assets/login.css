@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.login-section{
+    position: relative;
+    top: 600px;
+}
+.login-section .login-container{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    transform: scale(1.2);
+}
+.login-section .login-container h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222222;
+    border: 1px solid rgb(160, 10, 10);
+    padding: 10px 20px;
+    font-size: xx-large;
+}
+.login-section .login-container .login-form{
+    display: grid;
+    align-items: center;
+    place-items: center;
+    border-radius: .3em ;
+    gap: 30px;
+    background-color: rgb(240, 238, 238);
+    box-shadow: 0 0 10px black;
+    padding: 30px 20px;
+}
+.login-section .login-container .login-form input{
+    outline: none;
+    padding: 10px;
+    width:500px;
+    border-radius: .3em;
+    color:black;
+    font-family: sans-serif;
+    font-size: larger;
+}
+.login-section .login-container .login-form input:focus{
+    border: 1px solid rgb(160, 10, 10);
+}
+.login-section .login-container .login-form h3{
+    color: #222222;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+.login-section .login-container .login-form button{
+    width: fit-content;
+    padding: 10px 30px;
+    border:none;
+    background-color: #222222;
+    color: rgb(160, 10, 10);
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+    margin-top: 25px;
+    border-radius: .2em;
+
+ }
+ .login-section .login-container .login-form button:hover{
+    color:white;
+    background-color: rgb(160, 10, 10);
+ }

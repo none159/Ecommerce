@@ -1,0 +1,187 @@
+import  express from "express";
+import User from "../Models/usermodel.js";
+import bcrypt from "bcryptjs"
+import items from "./products.json" with {type:"json"};
+import generatetoken from "../utils/generatetoken.js";
+import protect from "../middleware/authmiddleware.js";
+import asyncHandler from "express-async-handler"
+import Cart from "../Models/cartmodel.js";
+import Favorite from "../Models/favoritemodel.js";
+import jwt from "jsonwebtoken"
+import Payement from "../Models/cardmodel.js";
+import Product from "../Models/productmodel.js";
+const ImportData=express.Router();
+
+ImportData.post("/",async(req,res)=>{
+    const {email}=req.body
+     const users =await User.find({email})
+     res.send(users)
+   
+
+})
+ImportData.post("/tokencheck",async(req,res)=>{
+    const {email,token} = req.body
+    const user = await User.findOne({email})
+    if(!user){
+        res.send(false)  
+     
+    }
+    else if(email!= undefined && user && token!=undefined){
+        const decoded = jwt.verify(token,process.env.JWT_SECRET)
+        if(decoded){
+            res.send(true)
+        }
+        else{
+            
+            res.send(false)
+        
+        }
+    }
+})
+ImportData.post("/cart/save",async(req,res)=>{
+    const {productid,email,quantity,size}=req.body
+    if(Product.find({productid})){
+    const quantite= Number(quantity)
+      await Cart.create({productid,email,quantity:quantite,size})
+       res.send("Saved")
+    }
+    else{
+        res.status(401)
+        throw new Error("no product found with this id")
+    }
+
+})
+ImportData.post("/favorite/save",async(req,res)=>{
+    const {productid,email}=req.body
+    if(await Favorite.findOne({productid})){
+        res.status(401)
+          throw new Error("no product available for rating")
+    }
+    else if(items.map((p)=>p).filter((p)=>p.id==productid)  ){
+        await Favorite.create({productid,email})
+         res.send("Saved")
+      }
+      else{
+          res.status(401)
+          throw new Error("no product found with this id")
+      }
+
+
+})
+ImportData.post("/cart",async(req,res)=>{
+    const {email}=req.body
+    const cart =await Cart.find({email})
+    res.send(cart)
+  
+
+})
+ImportData.post("/favorite",async(req,res)=>{
+    const {email} = req.body
+    const favorite =await Favorite.find({email})
+    res.send(favorite)
+  
+
+})
+ImportData.post("/login",async(req,res)=>{
+    const {email,password}=req.body
+    const importuser = await User.findOne({email});
+    if(importuser && (await importuser.matchPassword(password))){
+        res.send({
+            _id:importuser._id,
+            fullname:importuser.fullname,
+            email:importuser.email,
+            token:generatetoken(importuser._id),
+            createdAt:importuser.createdAt
+        })
+
+    }   
+    else{
+         res.status(401);
+         throw new Error("Invalid Email or Password");
+     
+    }
+
+})
+ImportData.post("/register",async(req,res)=>{
+    const {email,password,fullname,username,adresse,zip}=req.body
+    const importuser = await User.findOne({email});
+    if(importuser){
+        res.status(400)
+        throw new Error("user already exist")
+
+    }   
+    const user = await User.create({
+        fullname,email,password,adresse,zip,username
+    })
+    if(user){
+        res.status(201).json({
+            _id:user._id,
+            fullname:user.fullname,
+            email:user.email,
+            adresse:user.adresse,
+            username:user.username,
+            zip:user.zip,
+            token:generatetoken(user._id)
+        })
+    }
+    else{
+        res.status(400)
+        throw new Error("Invalid User Data")
+    }
+
+})
+ImportData.post("/payement",async(req,res)=>{
+    const {cardnumber,cardname,expiringdate,email,paypalemail}=req.body
+    let user;
+    const importuser = await Payement.findOne({email});
+    if(importuser){
+        res.status(400)
+        throw new Error("Payement info already exist")
+
+    }   
+    if(cardname!=undefined && cardnumber!=undefined && expiringdate !=undefined){
+      user = await Payement.create({
+        cardnumber,cardname,expiringdate,email
+    })
+}
+   if(paypalemail!=undefined){
+    user = await Payement.create({
+        email,paypalemail
+    })
+   }
+    if(user){
+        res.status(201).json({
+            _id:user._id,
+            cardnumber:user.cardnumber,
+            cardname:user.cardname,
+            expiringdate:user.expiringdate,
+            email:user.email,
+            paypalemail:user.paypalemail
+        })
+    }
+    else{
+        res.status(400)
+        throw new Error("Invalid Payement Data")
+    }
+
+})
+ImportData.post("/profile",async(req,res)=>{
+    const { email } = req.body
+     const user = await User.findOne({email});
+if(user){
+    res.json({
+        _id:user._id,
+        fullname:user.fullname,
+        email:user.email,
+        adresse:user.adresse,
+        username:user.username,
+        createdAt:user.createdAt
+    })
+}
+else{
+    res.status(404);
+    throw new Error ("User not found")
+}
+
+})
+export default ImportData;
