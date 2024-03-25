@@ -1,11 +1,9 @@
 
 import express from "express";
 import items from "./data/products.json";
-import fs from "fs"
 import mongoose from "mongoose";
 import dotenv from "dotenv"
 import cors from 'cors'
-import bodyParser from "body-parser";
 import connectDatabase from "./config/mongodb.js";
 import ImportData from "./data/dataimport.js";
 import Product from "./Models/productmodel.js";
@@ -16,30 +14,7 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 app.use("/api/users",ImportData);
-app.delete("/api/products/remove/:id",async(req,res)=>{
-    const id = req.params.id * 1;
-    const objtodelete= items.find((p)=>p.id===id)
-    const index = items.indexOf(objtodelete)   
-    items.splice(index,1) 
-    if(req.params.id !=""&&objtodelete!=undefined){
-    fs.writeFile('./data/products.json',JSON.stringify(items),(err)=>{
-        if(err){
-            res.send("something wrong!!!")
-        }
-        else{
-        res.status(204).json({
-            status:"success",
-            data:{
-                items:null
-            }
-        })
-    }
-    })
-    }else{
-        res.send("Invalid Id Or Already Deleted Item")
-    }
 
-})
 app.get("/api/products",async(req,res)=>{
    const product =await  Product.find({})
         let productarray =[];
@@ -281,48 +256,6 @@ else{
     res.send("Error : Enter required parameters")
 }
 })
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json())
-app.post("/api/products/add",async(req,res)=>{
-    if(JSON.stringify(req.body) != "{}" && req.body.name!="" && req.body.name !=null&&req.body.description!="" && req.body.description !=null&&req.body.categorie!="" && req.body.categorie !=null){
-        const name = req.body.name.replace(/[^a-zA-Z ]/g, '')
-        const description= req.body.description.replace(/[^a-zA-Z ]/g, '')
-        const categorie = req.body.categorie.replace(/[^a-zA-Z ]/g, '')
-    if(name!=""&&description!=""&&categorie!=""){
-
-    items.push(
-        {
-            "id":products[products.length-1].id+1,
-            "name":name,
-            "description":description,
-            "categorie":categorie,
-            "img":req.body.image             
-
-        }
-    )
-    fs.writeFile('./data/products.json',JSON.stringify(items),(err)=>{
-        if(err){
-            res.send("something wrong!!!")
-        }
-        else{
-        res.status(204).json({
-            status:"success",
-            data:{
-                items:null
-            }
-        })
-    }
-    })
-}
-else{
-    res.send("provide valid data")
-}
-    }
- 
-   res.send("Invalid JSON Object")
-    
-})
-app.post("/api/product/add",async(req,res)=>{})
 app.get("/",(req,res)=>{
     res.send("API Is Running....");
 })
