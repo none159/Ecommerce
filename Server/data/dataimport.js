@@ -1,7 +1,7 @@
 import  express from "express";
 import User from "../Models/usermodel.js";
 import bcrypt from "bcryptjs"
-import items from "./products.json" with {type:"json"};
+import items from "./products.json" assert {type:"json"};
 import generatetoken from "../utils/generatetoken.js";
 import protect from "../middleware/authmiddleware.js";
 import asyncHandler from "express-async-handler"
