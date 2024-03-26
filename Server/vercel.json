@@ -3,7 +3,7 @@
   
     "functions": {
       "api/**/*.js": {
-        "runtime": "nodejs14.x"
+        "runtime": "nodejs20.x"
       }
     }
   
