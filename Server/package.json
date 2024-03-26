@@ -2,15 +2,15 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "type": "commonjs",
-  "main": "index.mjs",
+  "type": "module",
+  "main": "index.js",
   "engines": {
     "node": "20.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./api/index.mjs",
-    "server": "nodemon ./api/index.mjs"
+    "start": "node ./api/index.js",
+    "server": "nodemon ./api/index.js"
   },
   "author": "",
   "license": "ISC",
