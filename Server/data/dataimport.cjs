@@ -10,7 +10,7 @@ const Favorite = require("../Models/favoritemodel.cjs");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const Payement = require("../Models/cardmodel.cjs");
-const Product = require("../Models/productmodel.cjs");
+const Product = require("../Models/productmodel.cjs")
 
 const ImportData=express.Router();
 ImportData.use(cors())
