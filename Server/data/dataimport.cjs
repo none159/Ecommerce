@@ -11,9 +11,9 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const Payement = require("../Models/cardmodel.cjs");
 const Product = require("../Models/productmodel.cjs")
-const app = express()
-const ImportData=app.Router();
-app.use(cors())
+
+const ImportData=express.Router();
+ImportData.use(cors())
 ImportData.post("/",async(req,res)=>{
     const {email}=req.body
      const users =await User.find({email})

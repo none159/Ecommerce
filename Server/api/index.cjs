@@ -11,7 +11,6 @@ const products = items
 dotenv.config({path:"../.env"});
 connectDatabase()
 const app = express();
-ImportData.use(cors())
 app.use(cors())
 app.use(express.json())
 app.use("/api/users",ImportData);
