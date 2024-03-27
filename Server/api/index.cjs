@@ -4,8 +4,8 @@ const items = require("../data/products.json");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDatabase = require("../config/mongodb.mjs");
-const ImportData = require("../data/dataimport.mjs");
-const Product = require("../Models/productmodel.mjs");
+const ImportData = require("../data/dataimport.cjs");
+const Product = require("../Models/productmodel.cjs");
 
 const products = items
 dotenv.config({path:"../.env"});

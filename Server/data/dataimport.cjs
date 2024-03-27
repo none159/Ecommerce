@@ -1,15 +1,15 @@
 const express = require("express")
-const User = require("../Models/usermodel.mjs");
+const User = require("../Models/usermodel.cjs");
 const bcrypt = require("bcryptjs");
 const items = require("./products.json");
 const generatetoken = require("../utils/generatetoken.js");
-const protect = require("../middleware/authmiddleware.mjs");
+const protect = require("../middleware/authmiddleware.cjs");
 const asyncHandler = require("express-async-handler");
 const Cart = require("../Models/cartmodel.mjs");
 const Favorite = require("../Models/favoritemodel.mjs");
 const jwt = require("jsonwebtoken");
 const Payement = require("../Models/cardmodel.mjs");
-const Product = require("../Models/productmodel.mjs");
+const Product = require("../Models/productmodel.cjs");
 
 const ImportData=express.Router();
 
