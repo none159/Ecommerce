@@ -19,7 +19,7 @@ const Hero = ()=>{
       const addtocart=async()=>{
 
         sale.map(async(p)=>{
-        await axios.post("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/cart/save",{
+        await axios.post("https://ecommerce-frontend-theta-plum.vercel.app/api/users/cart/save",{
          "productid":p.id,
          "email":JSON.parse(sessionStorage.getItem("email"))
         }).then((response)=>{
@@ -46,7 +46,7 @@ const Hero = ()=>{
      }
       const fetchtrending=async()=>{
         try{
-        await axios.get("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/trending").then((response)=>{
+        await axios.get("https://ecommerce-frontend-theta-plum.vercel.app/api/trending").then((response)=>{
             settrending(response.data)
 
         })
@@ -56,7 +56,7 @@ const Hero = ()=>{
       }
       const fetchonsale=async()=>{
         try{
-        await axios.get("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/onsale").then((response)=>{
+        await axios.get("https://ecommerce-frontend-theta-plum.vercel.app/api/onsale").then((response)=>{
             setsale(response.data)
 
         })
@@ -66,7 +66,7 @@ const Hero = ()=>{
       }
       const fetchonslider=async()=>{
         try{
-       await axios.get("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/onslider").then((response)=>{
+       await axios.get("https://ecommerce-frontend-theta-plum.vercel.app/api/onslider").then((response)=>{
        
                 
     if(image ==undefined && response.data!= undefined){
@@ -83,7 +83,7 @@ const Hero = ()=>{
       }
       const fetcharrival=async()=>{
         try{
-       await axios.get("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/arrival").then((response)=>{
+       await axios.get("https://ecommerce-frontend-theta-plum.vercel.app/api/arrival").then((response)=>{
             setarrival(response.data)
 
         })
@@ -106,7 +106,7 @@ const Hero = ()=>{
 
         const email = JSON.parse(sessionStorage.getItem("email"))
         const token = JSON.parse(sessionStorage.getItem("token"))
-        await axios.post("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/tokencheck",{
+        await axios.post("https://ecommerce-frontend-theta-plum.vercel.app/api/users/tokencheck",{
             email:email,
             token:token
         }).then((response)=>{   
