@@ -3,7 +3,6 @@ import { useSearchParams } from 'react-router-dom';
 import Singleitem from "./singleitem";
 import "../../assets/items.css"
 import axios from "axios";
-import LazyLoad from "react-lazyload";
 import Navbar from "../template/navbar";
 import Footer from "../template/footer";
 
@@ -36,9 +35,7 @@ const Itemslist = ()=>{
         <section className="items-section">
             {data != undefined?data.map((item)=>{
                 return(
-<LazyLoad height={300} offset={70}>
             <Singleitem item={item}/>
-            </LazyLoad>
                 )
             })
             :""
