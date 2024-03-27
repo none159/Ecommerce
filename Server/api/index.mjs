@@ -3,9 +3,9 @@ const express=require("express")
 const items = require("../data/products.json");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const connectDatabase = require("../config/mongodb.js");
-const ImportData = require("../data/dataimport.js");
-const Product = require("../Models/productmodel.js");
+const connectDatabase = require("../config/mongodb.mjs");
+const ImportData = require("../data/dataimport.mjs");
+const Product = require("../Models/productmodel.mjs");
 
 const products = items
 dotenv.config({path:"../.env"});

@@ -1,15 +1,15 @@
 const express = require("express")
-const User = require("../Models/usermodel.js");
+const User = require("../Models/usermodel.mjs");
 const bcrypt = require("bcryptjs");
 const items = require("./products.json");
 const generatetoken = require("../utils/generatetoken.js");
-const protect = require("../middleware/authmiddleware.js");
+const protect = require("../middleware/authmiddleware.mjs");
 const asyncHandler = require("express-async-handler");
-const Cart = require("../Models/cartmodel.js");
-const Favorite = require("../Models/favoritemodel.js");
+const Cart = require("../Models/cartmodel.mjs");
+const Favorite = require("../Models/favoritemodel.mjs");
 const jwt = require("jsonwebtoken");
-const Payement = require("../Models/cardmodel.js");
-const Product = require("../Models/productmodel.js");
+const Payement = require("../Models/cardmodel.mjs");
+const Product = require("../Models/productmodel.mjs");
 
 const ImportData=express.Router();
 
@@ -185,4 +185,4 @@ else{
 }
 
 })
-export default ImportData;
+module.exports=ImportData;

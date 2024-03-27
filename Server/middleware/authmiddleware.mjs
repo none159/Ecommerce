@@ -3,7 +3,7 @@ const jwt= require("jwt")
 const asyncHandler= require("express-async-handler")
 const mongoose = require("mongoose")
 
-const {User} = require("../Models/usermodel.js")
+const {User} = require("../Models/usermodel.mjs")
 
 
 const protect = asyncHandler(
@@ -28,4 +28,4 @@ const protect = asyncHandler(
 
     }
 )
-export default protect
+module.exports= protect
