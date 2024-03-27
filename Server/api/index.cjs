@@ -8,7 +8,7 @@ const ImportData = require("../data/dataimport.cjs");
 const Product = require("../Models/productmodel.cjs");
 
 const products = items
-dotenv.config({path:"../../.env"});
+dotenv.config({path:"../.env"});
 connectDatabase()
 const app = express();
 app.use(cors())
