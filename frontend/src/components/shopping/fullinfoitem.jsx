@@ -30,9 +30,9 @@ const Fullinfoitem =()=>{
     }
     }
     const addtocart=async()=>{
-        console.log(quantity)
+ 
         if(size != "" && quantity!=0){
-            console.log("run")
+        
        await axios.post("https://ecommerce-pi-self.vercel.app/api/users/cart/save",{
         "productid":id,
         "email":JSON.parse(sessionStorage.getItem("email")),
@@ -63,10 +63,12 @@ const Fullinfoitem =()=>{
            
     }
     const Tokencheck=async()=>{
-
         const email = JSON.parse(sessionStorage.getItem("email"))
+        const token = JSON.parse(sessionStorage.getItem("token"))
+        if(email && token){
         await axios.post("https://ecommerce-pi-self.vercel.app/api/users/tokencheck",{
-            email:email
+            email:email,
+            token:token
         }).then((response)=>{   
           if(response.data!=undefined)
               setres(response.data)
@@ -77,7 +79,7 @@ const Fullinfoitem =()=>{
     }).catch((err)=>{
         console.log(err)
     })
-    
+}
     }
     useEffect(()=>{
         fetchitem()

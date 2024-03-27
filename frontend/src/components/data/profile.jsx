@@ -24,6 +24,7 @@ const Profile=()=>{
 
         const email = JSON.parse(sessionStorage.getItem("email"))
         const token = JSON.parse(sessionStorage.getItem("token"))
+        if(email && token){
         await axios.post("https://ecommerce-pi-self.vercel.app/api/users/tokencheck",{
             email:email,
             token:token
@@ -36,7 +37,7 @@ const Profile=()=>{
     }).catch((err)=>{
         console.log(err)
     })
-    
+}
     }
     useEffect(()=>{
         fetchprofile()

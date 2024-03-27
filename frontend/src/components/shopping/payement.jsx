@@ -17,7 +17,7 @@ const Payement = ()=>{
         const expiringdate = formData.get("expiringdate");
         const paypalemail = formData.get("paypalemail");
         const email = JSON.parse(sessionStorage.getItem("email"))
-        console.log(cardnumber)
+   
         if(cardnumber!=undefined){
         await axios.post("https://ecommerce-pi-self.vercel.app/api/users/payement",{
              "cardnumber" : cardnumber,
@@ -37,6 +37,7 @@ const Payement = ()=>{
 
         const email = JSON.parse(sessionStorage.getItem("email"))
         const token = JSON.parse(sessionStorage.getItem("token"))
+        if(email && token){
         await axios.post("https://ecommerce-pi-self.vercel.app/api/users/tokencheck",{
             email:email,
             token:token
@@ -47,7 +48,7 @@ const Payement = ()=>{
     }).catch((err)=>{
         console.log(err)
     })
-    
+}
     }
     useEffect(()=>{
         Tokencheck()
