@@ -5,7 +5,7 @@ import soldimg from "/images/Icon-tag-percent.png"
 import "../../assets/home.css"
 import axios from "axios";
 import { Link } from "react-router-dom";
-import LazyLoad from "react-lazyload";
+
 import Singleitem from "../shopping/singleitem";
 const Hero = ()=>{
       const images = [img1,img2]
@@ -132,9 +132,9 @@ useEffect(()=>{
              {slider!=undefined && image!=undefined?<div className="slider">
                 <div className="list">
                     <div className="items">
-                    <LazyLoad height={200} offset={100}>
+                 
                         <img  src={image}/>
-                        </LazyLoad>
+                 
                     </div>
                 </div>
                 <div className="buttons">
@@ -153,9 +153,9 @@ useEffect(()=>{
                 {trending != undefined ?trending.map((p,index)=>{
             if(index<=2){
                 return(
-                    <LazyLoad height={200} offset={100}>
+                   
                   <Singleitem key={p.id} item={p}/>
-                  </LazyLoad>
+            
                 )}}):""}
                 </div>
                 <div className="arrow-container">
@@ -172,9 +172,7 @@ useEffect(()=>{
     
                     return(
                         <div className="newarrival-card" key={p.id}>
-                            <LazyLoad height={200} offset={70}>
                                 <img src={p.img} alt={p.img}/>
-                                </LazyLoad>
                                 <h2>{p.name}</h2>
                                 <h3>Arrives In : {p.datearrival}</h3>
 
@@ -186,14 +184,10 @@ useEffect(()=>{
                {sale!=undefined?sale.map((p)=>{
                 return( <div className="sold-container" key={p.id}>
                     <div className="soldimg-container">
-                    <LazyLoad height={200} offset={100}>
                         <img src={soldimg}/>
-                        </LazyLoad>
                     </div>
                     <div className="soldproduct">
-                    <LazyLoad height={200} offset={100}>
                         <img src={p.img}/>
-                        </LazyLoad>
                          <h2>Sold {p.percentage} End in 5 days</h2>
                          <a onClick={res?addtocart:()=>{}}>Add To Cart</a>
                     </div>
