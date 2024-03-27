@@ -6,13 +6,19 @@ const cors = require("cors");
 const connectDatabase = require("../config/mongodb.cjs");
 const ImportData = require("../data/dataimport.cjs");
 const Product = require("../Models/productmodel.cjs");
-
+const options = [
+    cors({
+      origin: '*',
+      methods: '*',
+      allowedHeaders: ['Content-Type', 'Authorization'],
+      credentials: true,
+    })
+  ];
 const products = items
 dotenv.config({path:"../.env"});
 connectDatabase()
 const app = express();
-app.options('*', cors())
-app.use(cors())
+app.use(options)
 app.use(express.json())
 app.use("/api/users",ImportData);
 
