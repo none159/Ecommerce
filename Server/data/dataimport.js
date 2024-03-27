@@ -1,15 +1,16 @@
 const express = require("express")
-import User from "../Models/usermodel.js";
-import bcrypt from "bcryptjs"
-import items from "./products.json" assert {type:"json"};
-import generatetoken from "../utils/generatetoken.js";
-import protect from "../middleware/authmiddleware.js";
-import asyncHandler from "express-async-handler"
-import Cart from "../Models/cartmodel.js";
-import Favorite from "../Models/favoritemodel.js";
-import jwt from "jsonwebtoken"
-import Payement from "../Models/cardmodel.js";
-import Product from "../Models/productmodel.js";
+const User = require("../Models/usermodel.js");
+const bcrypt = require("bcryptjs");
+const items = require("./products.json");
+const generatetoken = require("../utils/generatetoken.js");
+const protect = require("../middleware/authmiddleware.js");
+const asyncHandler = require("express-async-handler");
+const Cart = require("../Models/cartmodel.js");
+const Favorite = require("../Models/favoritemodel.js");
+const jwt = require("jsonwebtoken");
+const Payement = require("../Models/cardmodel.js");
+const Product = require("../Models/productmodel.js");
+
 const ImportData=express.Router();
 
 ImportData.post("/",async(req,res)=>{

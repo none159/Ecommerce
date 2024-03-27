@@ -1,6 +1,10 @@
-import jwt from "jsonwebtoken";
-import  asyncHandler from "express-async-handler"
-import User from "../Models/usermodel.js";
+
+const jwt= require("jwt")
+const asyncHandler= require("express-async-handler")
+const mongoose = require("mongoose")
+
+const {User} = require("../Models/usermodel.js")
+
 
 const protect = asyncHandler(
     async(req,res,next)=>{

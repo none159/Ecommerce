@@ -1,11 +1,12 @@
 
 const express=require("express")
-import items from "../data/products.json" assert { type: "json" };
-import dotenv from "dotenv"
-import cors from 'cors'
-import connectDatabase from "../config/mongodb.js";
-import ImportData from "../data/dataimport.js";
-import Product from "../Models/productmodel.js";
+const items = require("../data/products.json");
+const dotenv = require("dotenv");
+const cors = require("cors");
+const connectDatabase = require("../config/mongodb.js");
+const ImportData = require("../data/dataimport.js");
+const Product = require("../Models/productmodel.js");
+
 const products = items
 dotenv.config({path:"../.env"});
 connectDatabase()
