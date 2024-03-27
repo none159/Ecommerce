@@ -11,7 +11,7 @@ const Profile=()=>{
     const [res,setres]= useState()
     const navigate = useNavigate()
     const fetchprofile = async()=>{
-         await axios.post("https://ecommerce-frontend-theta-plum.vercel.app/api/users/profile",{
+         await axios.post("https://ecommerce-pi-self.vercel.app/api/users/profile",{
             "email":JSON.parse(sessionStorage.getItem("email"))
          }).then((response)=>{
             if(response.data!=undefined){
@@ -24,7 +24,7 @@ const Profile=()=>{
 
         const email = JSON.parse(sessionStorage.getItem("email"))
         const token = JSON.parse(sessionStorage.getItem("token"))
-        await axios.post("https://ecommerce-frontend-theta-plum.vercel.app/api/users/tokencheck",{
+        await axios.post("https://ecommerce-pi-self.vercel.app/api/users/tokencheck",{
             email:email,
             token:token
         }).then((response)=>{   

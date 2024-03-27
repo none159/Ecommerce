@@ -12,7 +12,7 @@ const Itemslist = ()=>{
     const [data,setdata]=useState()
     const fetchcategorie = async()=>{
         try{
-    await axios.get(`https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/products/category?categorie=${categorie}`).then((response)=>{
+    await axios.get(`https://ecommerce-pi-self.vercel.app/api/products/category?categorie=${categorie}`).then((response)=>{
         if(!response.data.includes("Error")){
     setdata(response.data)
         }

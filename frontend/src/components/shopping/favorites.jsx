@@ -11,9 +11,9 @@ const Favoritepage = ()=>{
    const navigate = useNavigate()
     const fetchfavorite = async()=>{
         const email = JSON.parse(sessionStorage.getItem("email"))
-        const userfavorite = await axios.post("https://ecommerce-frontend-theta-plum.vercel.app/api/users/favorite",{"email":email}).then((response)=>{return response.data})
+        const userfavorite = await axios.post("https://ecommerce-pi-self.vercel.app/api/users/favorite",{"email":email}).then((response)=>{return response.data})
         userfavorite.map(async(favorite)=>{
-         await axios.get(`https://ecommerce-frontend-theta-plum.vercel.app/api/product/${favorite.productid}`).then((response)=>{
+         await axios.get(`https://ecommerce-pi-self.vercel.app/api/product/${favorite.productid}`).then((response)=>{
              if(response.data!=undefined){
                 setdata(data.push(response.data))
                 setuseddata(data.flat())
@@ -28,7 +28,7 @@ const Favoritepage = ()=>{
 
         const email = JSON.parse(sessionStorage.getItem("email"))
         const token = JSON.parse(sessionStorage.getItem("token"))
-        await axios.post("https://ecommerce-frontend-theta-plum.vercel.app/api/users/tokencheck",{
+        await axios.post("https://ecommerce-pi-self.vercel.app/api/users/tokencheck",{
             email:email,
             token:token
         }).then((response)=>{   
