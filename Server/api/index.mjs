@@ -1,7 +1,6 @@
 
 const express=require("express")
 import items from "../data/products.json" assert { type: "json" };
-import mongoose from "mongoose";
 import dotenv from "dotenv"
 import cors from 'cors'
 import connectDatabase from "../config/mongodb.js";
