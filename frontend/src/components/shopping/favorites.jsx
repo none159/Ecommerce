@@ -11,6 +11,7 @@ const Favoritepage = ()=>{
    const navigate = useNavigate()
     const fetchfavorite = async()=>{
         const email = JSON.parse(sessionStorage.getItem("email"))
+        if(email) {
         const userfavorite = await axios.post("https://ecommerce-pi-self.vercel.app/api/users/favorite",{"email":email}).then((response)=>{return response.data})
         userfavorite.map(async(favorite)=>{
          await axios.get(`https://ecommerce-pi-self.vercel.app/api/product/${favorite.productid}`).then((response)=>{
@@ -23,6 +24,7 @@ const Favoritepage = ()=>{
            
         })
     })
+}
     }
     const Tokencheck=async()=>{
 

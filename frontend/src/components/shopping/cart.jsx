@@ -12,6 +12,7 @@ const Cartpage = ()=>{
     const [res,setres]=useState()
     const fetchcart = async()=>{
         const email = JSON.parse(sessionStorage.getItem("email"))
+        if(email) {
         const usercart = await axios.post("https://ecommerce-pi-self.vercel.app/api/users/cart",{"email":email}).then((response)=>{return response.data})
         usercart.map(async(cart)=>{
          await axios.get(`https://ecommerce-pi-self.vercel.app/api/product/${cart.productid}`).then((response)=>{
@@ -21,6 +22,7 @@ const Cartpage = ()=>{
              }
         })
     })
+}
     }
     const Tokencheck=async()=>{
 
