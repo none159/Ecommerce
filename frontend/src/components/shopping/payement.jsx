@@ -19,7 +19,7 @@ const Payement = ()=>{
         const email = JSON.parse(sessionStorage.getItem("email"))
         console.log(cardnumber)
         if(cardnumber!=undefined){
-        await axios.post("http://127.0.0.1:5000/api/users/payement",{
+        await axios.post("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/payement",{
              "cardnumber" : cardnumber,
              "cardname":cardname,
              "expiringdate":expiringdate,
@@ -27,7 +27,7 @@ const Payement = ()=>{
         })
     }
     else if(paypalemail!=undefined){
-        await axios.post("http://127.0.0.1:5000/api/users/payement",{
+        await axios.post("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/payement",{
             "email":email,
             "paypalemail":paypalemail
        })
@@ -37,7 +37,7 @@ const Payement = ()=>{
 
         const email = JSON.parse(sessionStorage.getItem("email"))
         const token = JSON.parse(sessionStorage.getItem("token"))
-        await axios.post("http://127.0.0.1:5000/api/users/tokencheck",{
+        await axios.post("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/tokencheck",{
             email:email,
             token:token
         }).then((response)=>{   

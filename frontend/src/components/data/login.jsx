@@ -15,7 +15,7 @@ const Login =(props)=>{
   const login = async(e)=>{
     e.preventDefault()
     
-      await axios.post("http://127.0.0.1:5000/api/users/login",{
+      await axios.post("https://https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/login",{
        "email":email,
        "password":password
       }).then((response)=>{
@@ -31,7 +31,7 @@ const Login =(props)=>{
 
     const email = JSON.parse(sessionStorage.getItem("email"))
     const token = JSON.parse(sessionStorage.getItem("token"))
-    await axios.post("http://127.0.0.1:5000/api/users/tokencheck",{
+    await axios.post("https://https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/tokencheck",{
         email:email,
         token:token
     }).then((response)=>{   

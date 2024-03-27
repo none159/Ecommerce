@@ -17,7 +17,7 @@ const Fullinfoitem =()=>{
     const [user,setuser]=useState()
     const fetchitem = async()=>{
         try{
-     await axios.get(`http://127.0.0.1:5000/api/products/${id}?categorie=${categorie}`).then((response)=>{
+     await axios.get(`https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/products/${id}?categorie=${categorie}`).then((response)=>{
         if(!response.data.includes("Error")){
         setdata(...response.data)
         }
@@ -33,7 +33,7 @@ const Fullinfoitem =()=>{
         console.log(quantity)
         if(size != "" && quantity!=0){
             console.log("run")
-       await axios.post("http://127.0.0.1:5000/api/users/cart/save",{
+       await axios.post("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/cart/save",{
         "productid":id,
         "email":JSON.parse(sessionStorage.getItem("email")),
         "quantity":quantity,
@@ -49,7 +49,7 @@ const Fullinfoitem =()=>{
     }
 }
     const addtofavorites = async()=>{
-        await axios.post("http://127.0.0.1:5000/api/users/favorite/save",{
+        await axios.post("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/favorite/save",{
             "productid":id,
             "email":JSON.parse(sessionStorage.getItem("email"))
 
@@ -65,7 +65,7 @@ const Fullinfoitem =()=>{
     const Tokencheck=async()=>{
 
         const email = JSON.parse(sessionStorage.getItem("email"))
-        await axios.post("http://127.0.0.1:5000/api/users/tokencheck",{
+        await axios.post("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/tokencheck",{
             email:email
         }).then((response)=>{   
           if(response.data!=undefined)
