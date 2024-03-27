@@ -11,7 +11,9 @@ const products = items
 dotenv.config({path:"../.env"});
 connectDatabase()
 const app = express();
-app.use(cors())
+app.use(cors({
+    origin: 'https://ecommerce-pi-self.vercel.app'
+  }));
 app.use(express.json())
 app.use("/api/users",ImportData);
 
