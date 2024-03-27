@@ -12,9 +12,9 @@ const Cartpage = ()=>{
     const [res,setres]=useState()
     const fetchcart = async()=>{
         const email = JSON.parse(sessionStorage.getItem("email"))
-        const usercart = await axios.post("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/cart",{"email":email}).then((response)=>{return response.data})
+        const usercart = await axios.post("https://ecommerce-frontend-theta-plum.vercel.app/api/users/cart",{"email":email}).then((response)=>{return response.data})
         usercart.map(async(cart)=>{
-         await axios.get(`https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/product/${cart.productid}`).then((response)=>{
+         await axios.get(`https://ecommerce-frontend-theta-plum.vercel.app/api/product/${cart.productid}`).then((response)=>{
             if(response.data!=undefined){
                 setdata(data.push(response.data))
                 setuseddata(data.flat())
@@ -26,7 +26,7 @@ const Cartpage = ()=>{
 
         const email = JSON.parse(sessionStorage.getItem("email"))
         const token = JSON.parse(sessionStorage.getItem("token"))
-        await axios.post("https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/tokencheck",{
+        await axios.post("https://ecommerce-frontend-theta-plum.vercel.app/api/users/tokencheck",{
             email:email,
             token:token
         }).then((response)=>{   

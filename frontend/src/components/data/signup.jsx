@@ -22,7 +22,7 @@ const Signup =()=>{
           /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
         if(confirmpassword===password && emailmatch){
-        await axios.post("https://https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/users/register",{
+        await axios.post("https://ecommerce-frontend-theta-plum.vercel.app/api/users/register",{
          "email":email,
          "password":password,
          "fullname":firstname+" "+lastname,

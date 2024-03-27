@@ -11,7 +11,7 @@ const Searchitems =()=>{
     const [data,setdata]=useState()
     const fetchitem = async()=>{
         try{
-     await axios.get(`https://ecommerce-server-3gc3d7lb9-yassines-projects-51a48afb.vercel.app/api/products/search?search=${search}`).then((response)=>{
+     await axios.get(`https://ecommerce-frontend-theta-plum.vercel.app/api/products/search?search=${search}`).then((response)=>{
         if(!response.data.includes("Error")){
         setdata(response.data)
         }
