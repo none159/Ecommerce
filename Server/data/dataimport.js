@@ -1,4 +1,4 @@
-import  express from "express";
+const express = require("express")
 import User from "../Models/usermodel.js";
 import bcrypt from "bcryptjs"
 import items from "./products.json" assert {type:"json"};
