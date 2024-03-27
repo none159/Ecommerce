@@ -5,7 +5,7 @@ import Login from "./login.jsx";
 const Tokencheck=async()=>{
 
     const email = JSON.parse(sessionStorage.getItem("email"))
-    await axios.post("https://ecommerce-frontend-theta-plum.vercel.app/api/users/tokencheck",{
+    await axios.post("https://ecommerce-pi-self.vercel.app/api/users/tokencheck",{
         email:email
     }).then((response)=>{   
         return response.data
