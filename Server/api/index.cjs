@@ -12,7 +12,7 @@ dotenv.config({path:"../.env"});
 connectDatabase()
 const app = express();
 app.use(cors({
-    origin: 'https://ecommerce-pi-self.vercel.app'
+    origin: '*'
   }));
 app.use(express.json())
 app.use("/api/users",ImportData);
