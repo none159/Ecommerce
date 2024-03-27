@@ -8,11 +8,12 @@ const asyncHandler = require("express-async-handler");
 const Cart = require("../Models/cartmodel.cjs");
 const Favorite = require("../Models/favoritemodel.cjs");
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
 const Payement = require("../Models/cardmodel.cjs");
 const Product = require("../Models/productmodel.cjs");
 
 const ImportData=express.Router();
-
+ImportData.use(cors())
 ImportData.post("/",async(req,res)=>{
     const {email}=req.body
      const users =await User.find({email})
