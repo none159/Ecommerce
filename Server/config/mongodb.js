@@ -9,4 +9,4 @@ const connectDatabase = async()=>{
         console.log(error)
     }
 }
-export default connectDatabase;
+module.exports=connectDatabase
