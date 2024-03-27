@@ -10,7 +10,6 @@
     {
       "src": "/(.*)",
      "dest": "/api/index.cjs",
-     "src": "/api/.*",
      "methods": ["GET", "POST", "PUT", "DELETE"],
      "headers": {
        "Access-Control-Allow-Origin": "*",
