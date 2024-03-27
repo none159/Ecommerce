@@ -15,6 +15,7 @@ app.use(cors({
     origin: '*'
   }));
 app.use(express.json())
+ImportData.use(cors())
 app.use("/api/users",ImportData);
 
 app.get("/api/products",async(req,res)=>{
