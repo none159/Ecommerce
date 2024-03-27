@@ -13,7 +13,7 @@ connectDatabase()
 const app = express();
 app.use(cors())
 app.use(express.json())
-app.use("/api/users",cors(),ImportData);
+app.use("/api/users",ImportData);
 
 app.get("/api/products",async(req,res)=>{
    const product =await  Product.find({})
