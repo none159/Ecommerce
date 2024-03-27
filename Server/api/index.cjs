@@ -8,7 +8,7 @@ const ImportData = require("../data/dataimport.cjs");
 const Product = require("../Models/productmodel.cjs");
 const options = [
     cors({
-      origin: '*',
+      origin: 'https://ecommerce-frontend-theta-plum.vercel.app',
       methods: '*',
       allowedHeaders: ['Content-Type', 'Authorization'],
       credentials: true,
