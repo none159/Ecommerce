@@ -14,15 +14,16 @@ const Product = require("../Models/productmodel.cjs")
 
 const ImportData=express.Router();
 ImportData.use(cors())
-ImportData.get("/",async(req,res)=>{
+ImportData.post("/",async(req,res)=>{
     const {email}=req.body
-     const users =await User.find({})
+     const users =await User.find({email})
      res.send(users)
    
 
 })
 ImportData.post("/tokencheck",async(req,res)=>{
     const {email,token} = req.body
+    if(email && token ){
     const user = await User.findOne({email})
     if(!user){
         res.send(false)  
@@ -39,6 +40,7 @@ ImportData.post("/tokencheck",async(req,res)=>{
         
         }
     }
+}
 })
 ImportData.post("/cart/save",async(req,res)=>{
     const {productid,email,quantity,size}=req.body
