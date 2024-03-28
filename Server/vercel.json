@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "./data/dataimport.cjs",
+      "src": "/data/dataimport.cjs",
       "use": "@vercel/node"
     }
   ],
@@ -24,6 +24,7 @@
     },
        {
       "src": "/api/users/login",
+      "dest":"/data/dataimport.cjs",
      "methods": ["GET", "POST", "PUT", "DELETE"],
      "headers": {
       "Access-Control-Allow-Credentials": "true",
