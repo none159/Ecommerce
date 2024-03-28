@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "/data/dataimport.cjs",
+      "src": "./data/dataimport.cjs",
       "use": "@vercel/node"
     }
   ],
