@@ -16,16 +16,6 @@
        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
        "Access-Control-Allow-Headers": "Content-Type"
      }
-    },
-    {
-      "src": "/(.*)",
-     "dest": "/data/dataimport.cjs",
-     "methods": ["GET", "POST", "PUT", "DELETE"],
-     "headers": {
-       "Access-Control-Allow-Origin": "*",
-       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-       "Access-Control-Allow-Headers": "Content-Type"
-     }
     }
   ]
 }
