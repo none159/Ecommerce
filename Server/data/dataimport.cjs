@@ -88,6 +88,7 @@ ImportData.post("/favorite",async(req,res)=>{
 })
 ImportData.post("/login",async(req,res)=>{
     const {email,password}=req.body
+    if(email && password){
     const importuser = await User.findOne({email});
     if(importuser && (await importuser.matchPassword(password))){
         res.send({
@@ -104,7 +105,7 @@ ImportData.post("/login",async(req,res)=>{
          throw new Error("Invalid Email or Password");
      
     }
-
+    }
 })
 ImportData.post("/register",async(req,res)=>{
     const {email,password,fullname,username,adresse,zip}=req.body
