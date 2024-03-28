@@ -14,6 +14,7 @@ const Login =(props)=>{
   const [password,setpassword]= useState()
   const login = async(e)=>{
     e.preventDefault()
+    if(email && password){
       await axios.post("https://ecommerce-pi-self.vercel.app/api/users/login",{
        "email":email,
        "password":password
@@ -25,6 +26,7 @@ const Login =(props)=>{
       }).catch((err)=>{
         console.log(err)
       })
+    }
   }
   const Tokencheck=async()=>{
 
