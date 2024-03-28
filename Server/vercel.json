@@ -4,6 +4,10 @@
     {
       "src": "/api/index.cjs",
       "use": "@vercel/node"
+    },
+    {
+      "src": "/data/dataimport.cjs",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
