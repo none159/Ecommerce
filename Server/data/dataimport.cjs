@@ -171,6 +171,7 @@ ImportData.post("/payement",async(req,res)=>{
 })
 ImportData.post("/profile",async(req,res)=>{
     const { email } = req.body
+    if(email){
      const user = await User.findOne({email});
 if(user){
     res.json({
@@ -186,6 +187,6 @@ else{
     res.status(404);
     throw new Error ("User not found")
 }
-
+    }
 })
 module.exports=ImportData;
