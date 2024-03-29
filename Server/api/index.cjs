@@ -57,8 +57,8 @@ app.get("/api/products/search",async(req,res)=>{
     const searchterm = req.query.search.replace(/[^a-zA-Z ]/g, '')
     //Products.find({productname;{ $regex: '.*' + searchterm + '.*' },productdescription:{ $regex: '.*' + searchterm + '.*' }})
     const product = await Product.find({
-       productname:{ $regex: '.*' + searchterm + '.*' ,options:'i'},
-        productdescription:{ $regex: '.*' + searchterm + '.*' ,options:'i'}
+       productname:{ $regex: '.*' + searchterm + '.*' },
+        productdescription:{ $regex: '.*' + searchterm + '.*' }
     })
     let productarray=[];
     if(product){
