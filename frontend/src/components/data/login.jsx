@@ -17,7 +17,7 @@ const Login =(props)=>{
     if(email && password){
       await axios.post("https://ecommerce-pi-self.vercel.app/api/users/login",{
         email:email,
-        password:passwrd
+        password:password
       }).then((response)=>{
                setdata(response.data)
                if(data!=undefined){
