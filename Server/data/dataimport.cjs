@@ -12,7 +12,7 @@ const cors = require("cors");
 const Payement = require("../Models/cardmodel.cjs");
 const Product = require("../Models/productmodel.cjs")
 
-const ImportData=express.Router();
+const ImportData=express.Router().use(cors());
 ImportData.use(cors({origin:"https://ecommerce-frontend-theta-plum.vercel.app/login"}))
 ImportData.use(express.json())
 ImportData.post("/",async(req,res)=>{
