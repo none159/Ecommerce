@@ -12,8 +12,8 @@ const cors = require("cors");
 const Payement = require("../Models/cardmodel.cjs");
 const Product = require("../Models/productmodel.cjs")
 
-const ImportData=express.Router().use(cors());
-app.options('*', cors())
+const ImportData=express.Router();
+
 
 
 ImportData.use(express.json())
