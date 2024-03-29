@@ -12,6 +12,7 @@ dotenv.config({path:"../.env"});
 connectDatabase()
 const app = express();
 app.use(cors({origin:"*"}))
+ImportData.use(cors({origin:"https://ecommerce-frontend-theta-plum.vercel.app/login"}))
 app.use(express.json())
 app.use("/api/users",ImportData);
 
