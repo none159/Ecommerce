@@ -82,7 +82,8 @@ app.get("/api/products/search",async(req,res)=>{
 catch(error){
     return res.send(error)
 }
-res.send("provide valid search term")
+
+return res.send("provide valid search term")
 }
 /*app.get("/api/products/search", async (req, res) => {
     try {
