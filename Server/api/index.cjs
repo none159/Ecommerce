@@ -15,7 +15,7 @@ app.use(cors({origin:"*"}))
 app.use(express.json())
 app.use("/api/users",ImportData);
 
-app.get("/api/products",async(req,res)=>{
+app.get("/api/products",cors({origin:"https://ecommerce-pi-self.vercel.app/api/users"}),async(req,res)=>{
    const product =await  Product.find({})
         let productarray =[];
     
