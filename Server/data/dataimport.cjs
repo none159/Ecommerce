@@ -13,6 +13,8 @@ const Payement = require("../Models/cardmodel.cjs");
 const Product = require("../Models/productmodel.cjs")
 
 const ImportData=express.Router();
+ImportData.use(cors())
+ImportData.use(express.json())
 ImportData.post("/",async(req,res)=>{
     const {email}=req.body
      const users =await User.find({email})
