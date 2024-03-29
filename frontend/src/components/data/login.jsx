@@ -15,7 +15,7 @@ const Login =(props)=>{
   const login = async(e)=>{
     e.preventDefault()
     if(email && password){
-      await axios.post("https://ecommerce-pi-self.vercel.app/api/users").then((response)=>{
+      await axios.get("https://ecommerce-pi-self.vercel.app/api/users").then((response)=>{
                setdata(response.data)
                if(data!=undefined){
                 navigate("/")
