@@ -10,8 +10,17 @@ const Product = require("../Models/productmodel.cjs");
 const products = items
 dotenv.config({path:"../.env"});
 connectDatabase()
-const app = express().use(cors());
+const app = express();
+const options = [
+  cors({
+    origin: '*',
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  })
+];
 
+app.use(options);
 
 
 app.use(express.json())
