@@ -20,7 +20,7 @@ const Searchitems =()=>{
         }
       })
     }catch(error){
-        console.log("error")
+        console.log(errorr)
     }
     }
     useEffect(()=>{
