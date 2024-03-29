@@ -11,7 +11,6 @@ const products = items
 dotenv.config({path:"../.env"});
 connectDatabase()
 const app = express().use(cors());
-app.options('*', cors())
 
 
 
