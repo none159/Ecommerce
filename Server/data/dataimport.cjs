@@ -21,7 +21,7 @@ const options = [
   })
 ];
 
-app.use(options);
+ImportData.use(options);
 
 
 ImportData.use(express.json())
