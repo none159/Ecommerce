@@ -15,9 +15,9 @@ const Product = require("../Models/productmodel.cjs")
 const ImportData=express.Router();
 ImportData.use(cors({origin:"https://ecommerce-frontend-theta-plum.vercel.app/login"}))
 ImportData.use(express.json())
-ImportData.post("/",cors(),async(req,res)=>{
+ImportData.get("/",cors(),async(req,res)=>{
     const {email}=req.body
-     const users =await User.find({email})
+     const users =await User.find({})
      res.send(users)
    
 
