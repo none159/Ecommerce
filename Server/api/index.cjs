@@ -69,7 +69,7 @@ app.get("/api/products/search",async(req,res)=>{
             price:p.productcost
 
          })})
-         res.json(productarray)
+        await res.json(productarray)
         }
     else{
         res.send("product not found.")
@@ -77,7 +77,7 @@ app.get("/api/products/search",async(req,res)=>{
 }
     }
 catch(error){
-    console.log(error)
+    res.send(error)
 }
 
 res.send("provide valid search term")
