@@ -52,6 +52,7 @@ app.get("/api/products",async(req,res)=>{
     
 })
 app.get("/api/products/search",async(req,res)=>{
+    try{
     if( req.query.search != ""&&req.query.search!=null){
     const searchterm = req.query.search.replace(/[^a-zA-Z ]/g, '')
     //Products.find({productname;{ $regex: '.*' + searchterm + '.*' },productdescription:{ $regex: '.*' + searchterm + '.*' }})
@@ -74,6 +75,11 @@ app.get("/api/products/search",async(req,res)=>{
         res.send("product not found.")
     }
 }
+    }
+catch(error){
+    console.log(error)
+}
+
 res.send("provide valid search term")
 })
 app.get("/api/allproducts/add",async(req,res)=>{
