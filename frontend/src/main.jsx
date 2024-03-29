@@ -7,7 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Errorpage from './components/template/errorpage.jsx';
+import Errorpage from './components/template/errorpage.jsx'
 import Home from './components/home/home.jsx';
 import Login from './components/data/login.jsx';
 import Signup from './components/data/signup.jsx';
