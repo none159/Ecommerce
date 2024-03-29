@@ -10,8 +10,8 @@ const Product = require("../Models/productmodel.cjs");
 const products = items
 dotenv.config({path:"../.env"});
 connectDatabase()
-const app = express();
-app.use(cors({origin:"*"}))
+const app = express().use(cors());
+
 app.use(express.json())
 app.use("/api/users",ImportData);
 
