@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../template/navbar";
+import Navbar from "./navbar";
 import Hero from "./hero";
-import Footer from "../template/footer";
+import Footer from "./footer";
 
 const Home =()=>{
     return(

@@ -1,8 +1,8 @@
 import React from "react";
 import { useLocation,Link } from "react-router-dom";
-import Navbar from "../template/navbar";
+import Navbar from "../home/navbar";
 import "../../assets/items.css"
-import Footer from "../template/footer";
+import Footer from "../home/footer";
 import Singleitem from "./singleitem";
 
 const Trending = ()=>{

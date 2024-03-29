@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from "react";
 import "../../assets/login.css"
-import Navbar from "../template/navbar";
-import Footer from "../template/footer";
+import Navbar from "../home/navbar.jsx";
+import Footer from "../home/footer.jsx";
 import axios from "axios";
 import Token from "./Token.jsx";
 import { redirect, useNavigate } from "react-router-dom";

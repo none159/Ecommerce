@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../template/navbar";
-import Footer from "../template/footer";
+import Navbar from "../home/navbar";
+import Footer from "../home/footer";
 import axios from "axios";
 import "../../assets/profile.css"
 import profileimg from "../../assets/profileimg/blank-profile-picture-973460_1280.png"

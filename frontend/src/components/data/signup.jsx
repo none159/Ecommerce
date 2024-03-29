@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from 'react'
 import "../../assets/signup.css"
-import Navbar from '../template/navbar';
-import Footer from '../template/footer';
+import Navbar from '../home/navbar';
+import Footer from '../home/footer';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 const Signup =()=>{

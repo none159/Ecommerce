@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../template/navbar";
-import Footer from "../template/footer";
+import Navbar from "../home/navbar";
+import Footer from "../home/footer";
 import "../../assets/payement.css"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";

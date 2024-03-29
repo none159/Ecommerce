@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import Navbar from "../template/navbar";
-import Footer from "../template/footer";
+import Navbar from "../home/navbar";
+import Footer from "../home/footer";
 import { Link } from "react-router-dom";
 import Singleitem from "./singleitem";
 const Searchitems =()=>{
