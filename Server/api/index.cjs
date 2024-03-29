@@ -51,40 +51,41 @@ app.get("/api/products",async(req,res)=>{
       
     
 })
-app.get("/api/products/search",async(req,res)=>{
-    try{
-    if( req.query.search != ""&&req.query.search!=null){
-    const searchterm = req.query.search.replace(/[^a-zA-Z ]/g, '')
-    //Products.find({productname;{ $regex: '.*' + searchterm + '.*' },productdescription:{ $regex: '.*' + searchterm + '.*' }})
-    const product = await Product.find({$or:[   
-       { productname:{ $regex: '.*' + searchterm + '.*' ,options:'i'}},
-        {productdescription:{ $regex: '.*' + searchterm + '.*' ,options:'i'}}
-    ]})
-    let productarray=[];
-    if(product){
-        await product.map((p)=>{productarray.push({  
+pp.get("/api/products/search", async (req, res) => {
+    try {
+        const searchTerm = req.query.search;
+        if (searchTerm && searchTerm.trim() !== "") {
+            const products = await Product.find({
+                $or: [
+                    { productname: { $regex: '.*' + searchTerm + '.*', $options: 'i' } },
+                    { productdescription: { $regex: '.*' + searchTerm + '.*', $options: 'i' } }
+                ]
+            });
 
-            id:p.productid*1,
-            name:p.productname,
-            description:p.productdescription,
-            categorie:p.productcategory,
-            img:p.productimg,
-            price:p.productcost
-
-         })})
-        await res.json(productarray)
+            if (products.length > 0) {
+                const productArray = products.map(p => ({
+                    id: p.productid, // Assuming productid is needed here
+                    name: p.productname,
+                    description: p.productdescription,
+                    categorie: p.productcategory,
+                    img: p.productimg,
+                    price: p.productcost
+                }));
+                return res.json(productArray);
+            } else {
+                return res.send("Product not found.");
+            }
+        } else {
+            return res.send("Provide a valid search term.");
         }
-    else{
-        res.send("product not found.")
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send("An error occurred while processing your request.");
     }
-}
-    }
-catch(error){
-    res.send(error)
-}
+});
 
-res.send("provide valid search term")
-})
+
+
 app.get("/api/allproducts/add",async(req,res)=>{
     let product;
     products.map(async(p)=>{
