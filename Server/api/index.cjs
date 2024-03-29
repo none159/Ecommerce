@@ -11,16 +11,7 @@ const products = items
 dotenv.config({path:"../.env"});
 connectDatabase()
 const app = express();
-const options = [
-  cors({
-    origin: '*',
-    methods: '*',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-  })
-];
-
-app.use(options);
+app.use(cors());
 
 
 app.use(express.json())
@@ -85,39 +76,7 @@ catch(error){
 
 return res.send("provide valid search term")
 }
-/*app.get("/api/products/search", async (req, res) => {
-    try {
-        const searchTerm = req.query.search;
-        if (searchTerm && searchTerm.trim() !== "") {
-            const products = await Product.find({
-                $or: [
-                    { productname: { $regex: '.*' + searchTerm + '.*', $options: 'i' } },
-                    { productdescription: { $regex: '.*' + searchTerm + '.*', $options: 'i' } }
-                ]
-            });
-
-            if (products.length > 0) {
-                const productArray = products.map(p => ({
-                    id: p.productid, // Assuming productid is needed here
-                    name: p.productname,
-                    description: p.productdescription,
-                    categorie: p.productcategory,
-                    img: p.productimg,
-                    price: p.productcost
-                }));
-                return res.json(productArray);
-            } else {
-                return res.send("Product not found.");
-            }
-        } else {
-            return res.send("Provide a valid search term.");
-        }
-    } catch (error) {
-        console.error(error);
-        return res.status(500).send("An error occurred while processing your request.");
-    }
-});
- */)
+)
 app.get("/api/allproducts/add",async(req,res)=>{
     let product;
     products.map(async(p)=>{

@@ -12,16 +12,8 @@ const Product = require("../Models/productmodel.cjs")
 const ImportData=express.Router();
 
 
-const options = [
-  cors({
-    origin: '*',
-    methods: '*',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-  })
-];
 
-ImportData.use(options);
+ImportData.use(cors());
 
 
 ImportData.use(express.json())
