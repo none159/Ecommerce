@@ -61,7 +61,7 @@ app.get("/api/products/search",async(req,res)=>{
     if(product){
         await product.map((p)=>{productarray.push({  
 
-            id:p.productid,
+            id:p.productid*1,
             name:p.productname,
             description:p.productdescription,
             categorie:p.productcategory,
