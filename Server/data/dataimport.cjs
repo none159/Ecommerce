@@ -27,8 +27,8 @@ ImportData.use(options);
 ImportData.use(express.json())
 ImportData.post("/",async(req,res)=>{
     const {email}=req.body
-     const users =await User.find({})
-     res.send(users)
+     const users =await User.find({email})
+    await res.send(users)
    
 
 })
