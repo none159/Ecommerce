@@ -134,7 +134,7 @@ useEffect(()=>{
                 <div className="list">
                     <div className="items">
                  
-                        <img  src={image} loading="lazy"/>
+                        <img loading="lazy"  src={image}/>
                  
                     </div>
                 </div>
@@ -173,7 +173,7 @@ useEffect(()=>{
     
                     return(
                         <div className="newarrival-card" key={p.id}>
-                                <img src={p.img} alt={p.img} loading="lazy"/>
+                                <img loading="lazy"  src={p.img} alt={p.img} />
                                 <h2>{p.name}</h2>
                                 <h3>Arrives In : {p.datearrival}</h3>
 
@@ -185,7 +185,7 @@ useEffect(()=>{
                {sale!=undefined?sale.map((p)=>{
                 return( <div className="sold-container" key={p.id}>
                     <div className="soldimg-container">
-                        <img src={soldimg}/>
+                        <img loading="lazy"  src={soldimg}/>
                     </div>
                     <div className="soldproduct">
                         <img src={p.img}/>
