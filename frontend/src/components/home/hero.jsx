@@ -134,7 +134,7 @@ useEffect(()=>{
                 <div className="list">
                     <div className="items">
                  
-                        <img  src={image}/>
+                        <img  src={image} loading="lazy"/>
                  
                     </div>
                 </div>
@@ -173,7 +173,7 @@ useEffect(()=>{
     
                     return(
                         <div className="newarrival-card" key={p.id}>
-                                <img src={p.img} alt={p.img}/>
+                                <img src={p.img} alt={p.img} loading="lazy"/>
                                 <h2>{p.name}</h2>
                                 <h3>Arrives In : {p.datearrival}</h3>
 
