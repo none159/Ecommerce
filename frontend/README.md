@@ -1,8 +1,2 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>About Project : </h2>
+<h3> In my MERN eCommerce project, I've built a user-friendly platform. It features easy product browsing, a simple shopping cart, and a way to save favorites—all securely stored. Users can sign up and make payments safely, making shopping hassle-free. </h3>

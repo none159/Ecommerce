@@ -44,7 +44,7 @@ const Navbar = ()=>{
                     </div>
                 </ul>
                 
-                {JSON.parse(sessionStorage.getItem("token"))==undefined || JSON.parse(sessionStorage.getItem("token"))==""?<Link to="/login"><li>Login</li></Link>:<li>About</li>}
+                {JSON.parse(sessionStorage.getItem("token"))==undefined || JSON.parse(sessionStorage.getItem("token"))==""?<Link to="/login"><li>Login</li></Link>:<Link to="/profile"><li>About</li></Link>}
                 {JSON.parse(sessionStorage.getItem("token"))==undefined || JSON.parse(sessionStorage.getItem("token"))==""? <Link to="/signup"><li>Sign up</li></Link>:<li>Feedback</li>}
              </ul>
           </div>
