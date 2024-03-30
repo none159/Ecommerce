@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import img1 from "/images/CK_shirts_logo.jpeg"
 import img2 from "/images/Tshirt/kemal-alkan-_BDBEP0ePQc-unsplash.jpg"
 import soldimg from "/images/Icon-tag-percent.png"
-import { AsyncImage } from 'loadable-image'
 import "../../assets/home.css"
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -134,10 +133,8 @@ useEffect(()=>{
              {slider!=undefined && image!=undefined?<div className="slider">
                 <div className="list">
                     <div className="items">
-                    <AsyncImage 
-                    width={600} height={400}>
+                 
                         <img  src={image}/>
-                        </AsyncImage>
                  
                     </div>
                 </div>
@@ -157,10 +154,9 @@ useEffect(()=>{
                 {trending != undefined ?trending.map((p,index)=>{
             if(index<=2){
                 return(
-                    <AsyncImage 
-                    width={600} height={400}>
-                  <Singleitem key={p.id} item={p}/></AsyncImage>
-        
+                   
+                  <Singleitem key={p.id} item={p}/>
+            
                 )}}):""}
                 </div>
                 <div className="arrow-container">
@@ -177,10 +173,7 @@ useEffect(()=>{
     
                     return(
                         <div className="newarrival-card" key={p.id}>
-                                    <AsyncImage 
-                    width={600} height={400}>
                                 <img src={p.img} alt={p.img}/>
-                                </AsyncImage>
                                 <h2>{p.name}</h2>
                                 <h3>Arrives In : {p.datearrival}</h3>
 
