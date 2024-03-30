@@ -20,6 +20,8 @@ import Cartpage from './components/shopping/cart.jsx';
 import Favoritepage from './components/shopping/favorites.jsx';
 import Payement from './components/shopping/payement.jsx';
 import Profile from './components/data/profile.jsx';
+import Feedback from './components/template/feedback.jsx';
+import About from './components/template/About.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -65,6 +67,14 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile/>
+  },
+  {
+    path: "/about",
+    element: <About/>
+  },
+  {
+    path: "/feedback",
+    element: <Feedback/>
   }
 
 
