@@ -1,0 +1,21 @@
+.about-section{
+    position: relative;
+    top: 300px;
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    place-items: center;
+}
+.about-section h2{
+    font-weight: 300;
+    font-size: xx-large;
+    color: gray;
+    border: 1px solid rgb(253, 116, 48);
+    padding: 10px;
+}
+.about-section h3{
+    font-family: sans-serif;
+    font-weight: 300;
+    border: 1px solid rgb(253, 116, 48);
+    padding: 10px;
+}
