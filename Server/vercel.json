@@ -1,37 +1,25 @@
 {
-  "version": 2,
-  "builds": [
+  "outputDirectory": "build",
+  "rewrites": [
     {
-      "src": "/api/index.cjs",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "/data/dataimport.cjs",
-      "use": "@vercel/node"
+      "source": "/(.*)",
+      "destination": "/api/index.cjs"
     }
   ],
-  "routes": [
+  "headers": [
     {
-      "src": "/(.*)",
-     "dest": "/api/index.cjs",
-     "methods": ["GET", "POST", "PUT", "DELETE"],
-     "headers": {
-      "Access-Control-Allow-Credentials": "true",
-       "Access-Control-Allow-Origin": "*",
-       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-       "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Authorisation, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-     }
-    },
-       {
-      "src": "/api/(.*)",
-     "methods": ["GET", "POST", "PUT", "DELETE"],
-     "headers": {
-      "Access-Control-Allow-Credentials": "true",
-       "Access-Control-Allow-Origin": "*",
-       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-       "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Authorisation, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-     }
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Credentials", "value": "true" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+        }
+      ]
     }
-    ]
-  
-}
+  ]
