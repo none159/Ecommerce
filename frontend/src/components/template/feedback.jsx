@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Footer from "../home/footer";
 import Navbar from "../home/navbar";
+import "../../assets/feedback.css"
 import emailjs from '@emailjs/browser';
 const Feedback = ()=>{
     const [sent, setsent] = useState(false)
