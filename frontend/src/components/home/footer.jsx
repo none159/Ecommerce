@@ -12,6 +12,7 @@ const Footer = ()=>{
                     <Link to="/"><li>Home</li></Link>
                     {JSON.parse(sessionStorage.getItem("token"))==undefined || JSON.parse(sessionStorage.getItem("token"))==""?<Link to="/signup"><li>Sign up</li></Link>:""}
                     {JSON.parse(sessionStorage.getItem("token"))==undefined || JSON.parse(sessionStorage.getItem("token"))==""?<Link to="/login"><li>login</li></Link>:""}
+                    {JSON.parse(sessionStorage.getItem("token"))!=undefined || JSON.parse(sessionStorage.getItem("token"))!=""?<Link to="/profile" style={{textDecoration:"inherit",color:"inherit"}}><li>Profile</li></Link>:""}
                     {JSON.parse(sessionStorage.getItem("token"))!=undefined || JSON.parse(sessionStorage.getItem("token"))!=""?<Link to="/favorite" style={{textDecoration:"inherit",color:"inherit"}}><li>Favorites</li></Link>:""}
                   </ul>
               </div>
