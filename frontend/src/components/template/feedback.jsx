@@ -4,7 +4,7 @@ import Navbar from "../home/navbar";
 import "../../assets/feedback.css"
 import dotenv from "dotenv"
 import emailjs from '@emailjs/browser';
-dotenv.config({path:"../../../../env"})
+dotenv.config({path:"/env"})
 const Feedback = ()=>{
     const [sent, setsent] = useState(false)
     const form = useRef();
