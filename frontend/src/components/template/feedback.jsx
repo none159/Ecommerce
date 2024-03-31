@@ -5,10 +5,11 @@ import "../../assets/feedback.css"
 import emailjs from '@emailjs/browser';
 const Feedback = ()=>{
     const [sent, setsent] = useState(false)
+    const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_688u0za', 'template_7sss1ol', form.current, 'airPSi7ELLKj01Y7i')
+        emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_EMAILJS_TEMPLATE, form.current, process.env.REACT_APP_EMAILJS_KEY)
             .then((result) => {
                 console.log(result.text);
                 e.target.reset();
