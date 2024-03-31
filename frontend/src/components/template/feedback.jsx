@@ -13,7 +13,7 @@ const Feedback = ()=>{
 
         emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_EMAILJS_TEMPLATE, form.current, process.env.REACT_APP_EMAILJS_KEY)
             .then((result) => {
-                console.log(result.text);
+                console.log(process.env.REACT_APP_EMAILJS_SERVICE);
                 e.target.reset();
                 setsent(true)
             }, (error) => {
