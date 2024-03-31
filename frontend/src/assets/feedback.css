@@ -31,7 +31,9 @@
     font-weight: 300;
     margin-top: 20px;
   }
-  
+  .feedback-section .contacts .contact-information h3 span{
+    color: rgb(253, 116, 48);
+  }
   
   .feedback-section .contacts .contactform-title {
     font-family: Montserrat, sans-serif;
@@ -68,7 +70,7 @@
   
   .feedback-section .contacts .contactform label {
     font-family: Montserrat, sans-serif;
-    color: white;
+    color: black;
     font-size: 25px;
     font-weight: 300;
   }
@@ -76,7 +78,7 @@
   .feedback-section .contacts .contactform input {
     border: none;
     border-radius: .3em;
-    background-color: #22201ec0;
+    background-color: #222222;
     box-shadow: 0 0 5px black;
     color: white;
     font-size: 15px;
@@ -98,7 +100,7 @@
     border: none;
     border-radius: .3em;
     resize: none;
-    background-color: #22201ec0;
+    background-color: #222222;
     box-shadow: 0 0 5px black;
     color: white;
     font-size: 15px;
