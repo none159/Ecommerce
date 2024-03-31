@@ -13,7 +13,7 @@
     padding: 15px;
     font-size: 50px;
     border-radius: .1em;
-    background: -webkit-linear-gradient(-259deg, #f81f01, rgb(253, 116, 48));
+    background: -webkit-linear-gradient(-259deg, rgb(96, 42, 16), rgb(253, 116, 48));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: glow 1s alternate ease-in-out infinite;
@@ -67,7 +67,9 @@
     gap: 30px;
   
   }
-  
+  .feedback-section .contacts .contactform label:nth-child(1) ,  .feedback-section .contacts .contactform label:nth-child(2){
+    color: rgb(253, 116, 48);
+  } 
   .feedback-section .contacts .contactform label {
     font-family: Montserrat, sans-serif;
     color: black;
@@ -128,7 +130,7 @@
   
   .feedback-section .contacts .contactform form input:last-child:hover {
     color: white;
-    background-color: #dc3546;
+    background-color: rgb(253, 116, 48);
   }
   
   .feedback-section .contacts .contactform form input:last-child:focus {

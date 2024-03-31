@@ -10,15 +10,16 @@ const Feedback = ()=>{
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
-
+    if(form.current!={}){
         emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE, import.meta.env.VITE_EMAILJS_TEMPLATE, form.current, import.meta.env.VITE_EMAILJS_KEY)
             .then((result) => {
-                console.log(process.env.REACT_APP_EMAILJS_SERVICE);
+                
                 e.target.reset();
                 setsent(true)
             }, (error) => {
                 console.log(error.text);
             });
+    }
     };
 
     useEffect(() => {
