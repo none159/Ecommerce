@@ -29,7 +29,7 @@ const Feedback = ()=>{
        <>
        <Navbar/>
         <section>
-        <div className="contacts" ref={props.contact}>
+        <div className="contacts">
                     <div>
                         <h2 className="contact-title">Contacts</h2>
                         <div className="contact-information">
