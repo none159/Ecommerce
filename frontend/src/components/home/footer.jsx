@@ -20,7 +20,7 @@ const Footer = ()=>{
                 <ul>
                  <Link to="/about"> <li>About</li></Link>
                   <li>FAQ</li>
-                 <Link to="feedback"> <li>Feedback</li></Link>
+                 <Link to="/feedback"> <li>Feedback</li></Link>
                 </ul>
               </div>
               <div className="footer-links">
