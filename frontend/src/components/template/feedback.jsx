@@ -28,7 +28,7 @@ const Feedback = ()=>{
     return(
        <>
        <Navbar/>
-        <section>
+        <section className="feedback-section">
         <div className="contacts">
                     <div>
                         <h2 className="contact-title">Contacts</h2>
