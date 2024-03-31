@@ -11,7 +11,7 @@ const Feedback = ()=>{
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm(import.meta.env.REACT_APP_EMAILJS_SERVICE, import.meta.env.REACT_APP_EMAILJS_TEMPLATE, form.current, import.meta.env.REACT_APP_EMAILJS_KEY)
+        emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE, import.meta.env.VITE_EMAILJS_TEMPLATE, form.current, import.meta.env.VITE_EMAILJS_KEY)
             .then((result) => {
                 console.log(process.env.REACT_APP_EMAILJS_SERVICE);
                 e.target.reset();
