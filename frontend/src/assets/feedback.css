@@ -33,6 +33,7 @@
   }
   .feedback-section .contacts .contact-information h3 span{
     color: rgb(253, 116, 48);
+    text-decoration: none;
   }
   
   .feedback-section .contacts .contactform-title {
@@ -67,9 +68,7 @@
     gap: 30px;
   
   }
-  .feedback-section .contacts .contactform label:nth-child(1) ,  .feedback-section .contacts .contactform label:nth-child(2){
-    color: rgb(253, 116, 48);
-  } 
+
   .feedback-section .contacts .contactform label {
     font-family: Montserrat, sans-serif;
     color: black;
