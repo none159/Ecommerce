@@ -33,10 +33,12 @@ const Fullinfoitem =()=>{
  
         if(size != "" && quantity!=0 && !res){
             if (JSON.parse(localStorage.getItem("cart"))){
+                const cartitems= JSON.parse(localStorage.getItem("cart"))
+                console.log(cartitems)
                 localStorage.setItem(
                   "cart",
                   JSON.stringify(
-                    JSON.parse(localStorage.getItem("cart")).push({
+                    cartitems.push({
                       id: id,
                       quantity: quantity,
                       size: size,
