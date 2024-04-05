@@ -11,6 +11,18 @@ const Cartpage = ()=>{
     const navigate = useNavigate()
     const [res,setres]=useState()
     const fetchcart = async()=>{
+        if(localStorage.getItem("cart")){
+            const cartlocal = JSON.parse(localStorage.getItem("cart"))
+            cartlocal.map(async(p)=>{
+             await axios.get(`https://ecommerce-pi-self.vercel.app/api/product/${p.id}`).then((response)=>{
+                if(response.data!=undefined){
+                    setdata(data.push(response.data))
+                    setuseddata(data.flat())
+                 }
+            })
+        })
+        
+        }
         const email = JSON.parse(sessionStorage.getItem("email"))
         if(email) {
         const usercart = await axios.post("https://ecommerce-pi-self.vercel.app/api/users/cart",{"email":email}).then((response)=>{return response.data})
