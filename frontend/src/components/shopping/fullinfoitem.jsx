@@ -32,17 +32,17 @@ const Fullinfoitem =()=>{
     const addtocart=async()=>{
  
         if(size != "" && quantity!=0 && !res){
-            if (JSON.parse(localStorage.getItem("cart"))){
-                const cartitems= JSON.parse(localStorage.getItem("cart"))
+            if (JSON.parse(localStorage.getItem("cart")!=undefined)){
+                const cartitems = JSON.parse(localStorage.getItem("cart"))
                 console.log(cartitems)
                 localStorage.setItem(
                   "cart",
-                  
+                  JSON.stringify(
                     cartitems.push({
                       id: id,
                       quantity: quantity,
                       size: size,
-                    })
+                    }))
                   )
                 ;
                   }
