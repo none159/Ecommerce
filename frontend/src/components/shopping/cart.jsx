@@ -43,10 +43,7 @@ const Cartpage = ()=>{
     }
     useEffect(()=>{
         fetchcart()
-        Tokencheck()
-        if(!res){
-            navigate("/login")
-        }
+   
     },[])
     return(
         <>
