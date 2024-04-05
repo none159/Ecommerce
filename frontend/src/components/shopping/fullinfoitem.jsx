@@ -31,22 +31,63 @@ const Fullinfoitem =()=>{
     }
     const addtocart=async()=>{
  
-        if(size != "" && quantity!=0){
-        
-       await axios.post("https://ecommerce-pi-self.vercel.app/api/users/cart/save",{
-        "productid":id,
-        "email":JSON.parse(sessionStorage.getItem("email")),
-        "quantity":quantity,
-        "size":size
-       }).then((response)=>{
-        if(response){
-            setquantity(0)
-            setsize("")
-        }
-       }).catch((err)=>{
-        console.log(err)
-       })
-    }
+        if(size != "" && quantity!=0 && !res){
+            if (JSON.parse(localStorage.getItem("cart"))){
+                localStorage.setItem(
+                  "cart",
+                  JSON.stringify(
+                    JSON.parse(localStorage.getItem("cart")).push({
+                      id: id,
+                      quantity: quantity,
+                      size: size,
+                    })
+                  )
+                );
+                  }
+                  else {
+                      localStorage.setItem(
+                        "cart",
+                        JSON.stringify([
+                          {
+                            id: id,
+                            quantity: quantity,
+                            size: size,
+                          },
+                        ])
+                      );
+                    }
+                }
+                    else{
+                        if(JSON.parse(localStorage.getItem("cart"))){
+                            await axios.post("https://ecommerce-pi-self.vercel.app/api/users/cart/save",{
+                                "productid":JSON.parse(localStorage.getItem("cart")).id,
+                                "email":JSON.parse(sessionStorage.getItem("email")),
+                                "quantity":JSON.parse(localStorage.getItem("cart")).quantity,
+                                "size":JSON.parse(localStorage.getItem("cart")).size
+                            }).then((response)=>{
+                                if(response){
+                                    setquantity(0)
+                                    setsize("")
+                                }
+                            }).catch((err)=>{
+                                console.log(err)
+                            })
+                        }
+                    await axios.post("https://ecommerce-pi-self.vercel.app/api/users/cart/save",{
+                        "productid":id,
+                        "email":JSON.parse(sessionStorage.getItem("email")),
+                        "quantity":quantity,
+                        "size":size
+                    }).then((response)=>{
+                        if(response){
+                            setquantity(0)
+                            setsize("")
+                        }
+                    }).catch((err)=>{
+                        console.log(err)
+                    })
+                }
+    
 }
     const addtofavorites = async()=>{
         await axios.post("https://ecommerce-pi-self.vercel.app/api/users/favorite/save",{
@@ -72,9 +113,7 @@ const Fullinfoitem =()=>{
         }).then((response)=>{   
           if(response.data!=undefined)
               setres(response.data)
-              if(!res){
-                navigate("/login")
-              }
+
     
     }).catch((err)=>{
         console.log(err)
@@ -108,8 +147,8 @@ const Fullinfoitem =()=>{
                 <h2>Quantity :</h2>
                 <input type="number" onChange={(e)=>setquantity(e.target.value)} defaultValue={quantity} min={1} max={20}></input>
                 <div className="fullinfobtns">
-                <button onClick={res != false?addtocart:Tokencheck}>Add to Cart</button>
-                <button onClick={res !=false?addtofavorites:Tokencheck}>Add to Favorites</button>
+                <button onClick={res != false?addtocart:""}>Add to Cart</button>
+                <button onClick={res !=false?addtofavorites:Tokencheck?navigate("/login"):""}>Add to Favorites</button>
                 <Link to="/payement" style={{textDecoration:"inherit",color:"inherit"}}><button>Buy</button></Link>
                 </div>
             </div>
