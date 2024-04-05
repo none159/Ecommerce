@@ -37,14 +37,14 @@ const Fullinfoitem =()=>{
                 console.log(cartitems)
                 localStorage.setItem(
                   "cart",
-                  JSON.stringify(
+                  
                     cartitems.push({
                       id: id,
                       quantity: quantity,
                       size: size,
                     })
                   )
-                );
+                ;
                   }
                   else {
                       localStorage.setItem(
