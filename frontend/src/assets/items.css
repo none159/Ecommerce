@@ -47,6 +47,7 @@
     text-align: center;
 }
 .item {
+    position: relative;
     display: grid;
     background-color: #eceaeac3;
     width: 300px;
