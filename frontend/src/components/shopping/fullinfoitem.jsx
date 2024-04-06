@@ -31,8 +31,8 @@ const Fullinfoitem =()=>{
     }
     const addtocart=async()=>{
  
-        if(size != "" && quantity!=0 && !res && !JSON.parse(localStorage.getItem("cart")).find((p)=>p.id==id)){
-            if (JSON.parse(localStorage.getItem("cart")!=undefined)){
+        if(size != "" && quantity!=0 && !res){
+            if (JSON.parse(localStorage.getItem("cart")!=undefined) && !JSON.parse(localStorage.getItem("cart"))?.find((p)=>p.id==id)){
                 const cartitems = JSON.parse(localStorage.getItem("cart"))
                 console.log(cartitems)
                 cartitems.push({
