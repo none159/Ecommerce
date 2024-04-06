@@ -34,7 +34,6 @@ const Fullinfoitem =()=>{
         if(size != "" && quantity!=0 && !res){
             if (JSON.parse(localStorage.getItem("cart")!=undefined) && !JSON.parse(localStorage.getItem("cart"))?.find((p)=>p.id==id)){
                 const cartitems = JSON.parse(localStorage.getItem("cart"))
-                console.log(cartitems)
                 cartitems.push({
                     id: id,
                     quantity: quantity,
@@ -46,7 +45,7 @@ const Fullinfoitem =()=>{
                   JSON.stringify(cartitems))
                 ;
                   }
-                  else{
+                  else if( !JSON.parse(localStorage.getItem("cart"))?.find((p)=>p.id==id)){
                       localStorage.setItem(
                         "cart",
                         JSON.stringify([
