@@ -8,7 +8,7 @@ const Singleitem = (props)=>{
             <img loading="lazy" src={props.item.img} ></img>
             <h2>{props.item.name}</h2>
             <h3>Price: <span>{props.item.price}</span></h3>
-            {props.item.size !=undefined&& props.item.quantity != undefined? <div><h3>Price : <span>{props.item.size}</span></h3><h3>Quantity : <span>{props.item.quantity}</span></h3></div>:""}
+            {props.item.size !=undefined&& props.item.quantity != undefined? <><h3>Size : <span>{props.item.size}</span></h3><h3>Quantity : <span>{props.item.quantity}</span></h3></>:""}
         </div>
         </Link>
     )
