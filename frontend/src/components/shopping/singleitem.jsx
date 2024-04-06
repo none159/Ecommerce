@@ -5,6 +5,7 @@ import "../../assets/items.css"
 const Singleitem = (props)=>{
     const handleDelete=(id)=>{
         localStorage.setItem("cart",JSON.stringify(JSON.parse(localStorage.getItem("cart")).filter((item)=>item.id!=id)))
+        props.onDelete(id)
     }
     return(
      <div style={{paddingBottom:props.item.quantity!=undefined?"220px":""}}className="item" key={props.item.id}>
