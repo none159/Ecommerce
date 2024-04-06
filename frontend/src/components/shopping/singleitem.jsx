@@ -4,7 +4,7 @@ import "../../assets/items.css"
 
 const Singleitem = (props)=>{
     return(
-      <Link style={{ textDecoration: 'none',width:"fit-content" }} to={`/fulldetails?id=${props.item.id}&categorie=${props.item.categorie}`}><div style={{padding:props.item.quantity!=undefined?"0 170px":""}}className="item" key={props.item.id}>
+      <Link style={{ textDecoration: 'none',width:"fit-content" }} to={`/fulldetails?id=${props.item.id}&categorie=${props.item.categorie}`}><div style={{padding:props.item.quantity!=undefined?"150px 0":""}}className="item" key={props.item.id}>
             <img loading="lazy" src={props.item.img} ></img>
             <h2>{props.item.name}</h2>
             <h3>Price: <span>{props.item.price}</span></h3>
