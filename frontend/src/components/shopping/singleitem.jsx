@@ -10,7 +10,7 @@ const Singleitem = (props)=>{
         props.setdata(items)
     }
     return(
-     <div style={{paddingBottom:items.quantity!=undefined?"220px":""}}className="item" key={items.id}>
+     <div style={{paddingBottom:items.quantity!=undefined?"170px":""}}className="item" key={items.id}>
              {items.quantity?<button className="close-button"  onClick={() =>
           handleDelete(items.id)}>X</button>:""}
          <Link style={{ textDecoration: 'none',width:"fit-content" }} to={`/fulldetails?id=${items.id}&categorie=${items.categorie}`}>
