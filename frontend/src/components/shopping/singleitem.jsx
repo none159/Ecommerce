@@ -3,7 +3,7 @@ import { Link ,useState} from "react-router-dom";
 import "../../assets/items.css"
 
 const Singleitem = (props)=>{
-    const [items, setItems] = useState(props.items);
+    const [items, setItems] = useState(props.item);
     const handleDelete=(id)=>{
         localStorage.setItem("cart",JSON.stringify(JSON.parse(localStorage.getItem("cart")).filter((item)=>item.id!=id)))
         setItems(JSON.parse(localStorage.getItem("cart")))
