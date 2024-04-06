@@ -10,7 +10,7 @@ const Singleitem = (props)=>{
     }
     return(
      <div style={{paddingBottom:items.quantity!=undefined?"220px":""}}className="item" key={items.id}>
-             {items.id?<button className="close-button"  onClick={(e) => {
+             {items.quantity?<button className="close-button"  onClick={(e) => {
           e.stopPropagation(); 
           handleDelete(items.id);
         }}>X</button>:""}
