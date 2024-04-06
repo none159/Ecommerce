@@ -11,7 +11,7 @@ const Cartpage = ()=>{
     const fetchcart = async()=>{
         if(localStorage.getItem("cart")){
             const cartlocal = JSON.parse(localStorage.getItem("cart"))
-            cartlocal.map(async(p)=>{
+            cartlocal?.map(async(p)=>{
              await axios.get(`https://ecommerce-pi-self.vercel.app/api/product/${p.id}`).then((response)=>{
                 if(response.data!=undefined){
         
@@ -46,7 +46,7 @@ const Cartpage = ()=>{
         <Navbar/>
         <h2 className="item-category">Cart :</h2>
         <section className="items-section">
-        {useddata!=undefined && useddata?useddata?.map((item)=>{
+        {useddata!=undefined && useddata?useddata.map((item)=>{
             return(
         <Singleitem item={item} setdata={setuseddata}/>
             )
