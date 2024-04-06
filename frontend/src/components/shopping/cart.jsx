@@ -17,6 +17,7 @@ const Cartpage = ()=>{
              await axios.get(`https://ecommerce-pi-self.vercel.app/api/product/${p.id}`).then((response)=>{
                 if(response.data!=undefined){
                     setuseddata(data.push({...response.data,size:cartlocal.size,quantity : cartlocal.quantity}))
+                    useddata.map((p)=>console.log(p))
                     
                  }
             })
@@ -62,11 +63,7 @@ const Cartpage = ()=>{
         <Navbar/>
         <h2 className="item-category">Cart :</h2>
         <section className="items-section">
-        {useddata!=undefined?useddata.map((item)=>{
-            return(
-        <Singleitem item={item}/>
-            )
-        }):""}
+      
         </section>
         <Link to="/"><button className="back">Back</button></Link>
         <Footer/>
