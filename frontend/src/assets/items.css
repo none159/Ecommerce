@@ -82,6 +82,15 @@ color:rgba(0, 0, 0, 0.802);
 .item h3 span{
     color: rgb(152, 148, 148);
 }
+.item .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: red; }
 .fullinfo-section{
     position: relative;
     top: 500px;
