@@ -48,7 +48,7 @@ const Cartpage = ()=>{
         <section className="items-section">
         {useddata!=undefined?useddata.map((item)=>{
             return(
-        <Singleitem item={item}/>
+        <Singleitem item={item} setdata={setuseddata}/>
             )
         }):""}
         </section>

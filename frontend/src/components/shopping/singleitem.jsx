@@ -7,6 +7,7 @@ const Singleitem = (props)=>{
     const handleDelete=(id)=>{
         localStorage.setItem("cart",JSON.stringify(JSON.parse(localStorage.getItem("cart")).filter((item)=>item.id!=id)))
         setItems(JSON.parse(localStorage.getItem("cart")))
+        items.setdata(items)
     }
     return(
      <div style={{paddingBottom:items.quantity!=undefined?"220px":""}}className="item" key={items.id}>
