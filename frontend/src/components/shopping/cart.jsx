@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../home/navbar";
+import Navbar from "../home/navbar"
 import Footer from "../home/footer";
 import Singleitem from "./singleitem";
 import axios from "axios"
