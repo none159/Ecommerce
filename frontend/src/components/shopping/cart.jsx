@@ -15,7 +15,7 @@ const Cartpage = ()=>{
              await axios.get(`https://ecommerce-pi-self.vercel.app/api/product/${p.id}`).then((response)=>{
                 if(response.data!=undefined){
                     setdata(data.push({...response.data,size:p.size,quantity : p.quantity}))
-                    console.log(data)
+                    setuseddata(data)
                     
                  }
             })
