@@ -46,7 +46,7 @@ const Fullinfoitem =()=>{
                   JSON.stringify(cartitems))
                 ;
                   }
-                  else {
+                  else if(res){
                       localStorage.setItem(
                         "cart",
                         JSON.stringify([
@@ -59,7 +59,7 @@ const Fullinfoitem =()=>{
                       );
                     }
                 }
-                    else{
+                    else if(!JSON.parse(localStorage.getItem("cart"))?.find((p)=>p.id==id)){
                         if(JSON.parse(localStorage.getItem("cart"))){
                             await axios.post("https://ecommerce-pi-self.vercel.app/api/users/cart/save",{
                                 "productid":JSON.parse(localStorage.getItem("cart")).id,
