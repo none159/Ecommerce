@@ -5,7 +5,7 @@ import "../../assets/items.css"
 const Singleitem = (props)=>{
     const [items, setItems] = useState(props.item);
     const handleDelete=(id)=>{
-        JSON.stringify(localStorage.setItem("cart",JSON.stringify(JSON.parse(localStorage.getItem("cart")).filter((item)=>item.id!=id))))
+localStorage.setItem("cart",JSON.parse(localStorage.getItem("cart")).filter((item)=>item.id!=id))
         setItems(JSON.parse(localStorage.getItem("cart")))
         props.setdata(items)
     }
