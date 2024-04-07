@@ -9,7 +9,7 @@ const Singleitem = (props)=>{
 localStorage.setItem("cart",JSON.stringify(JSON.parse(localStorage.getItem("cart")).filter((item)=>item.id!=id)))
         setItems(JSON.parse(localStorage.getItem("cart")))
         props.setdata(items)
-        navigate("/cart")
+        navigate("../cart")
     }
     return(
      <div style={{paddingBottom:items.quantity!=undefined?"170px":""}}className="item" key={items.id}>
