@@ -4,14 +4,16 @@ import "../../assets/items.css"
 
 const Singleitem = (props)=>{
     const [items, setItems] = useState(props.item);
-    const navigate = useNavigate()
+
     const handleDelete=(id)=>{
 localStorage.setItem("cart",JSON.stringify(JSON.parse(localStorage.getItem("cart")).filter((item)=>item.id!=id)))
         setItems(JSON.parse(localStorage.getItem("cart")))
         props.setdata(items)
-        navigate("../cart")
+
     }
     return(
+        <>
+    {items.id?
      <div style={{paddingBottom:items.quantity!=undefined?"170px":""}}className="item" key={items.id}>
              {items.quantity?<button className="close-button"  onClick={() =>
           handleDelete(items.id)}>X</button>:""}
@@ -21,7 +23,7 @@ localStorage.setItem("cart",JSON.stringify(JSON.parse(localStorage.getItem("cart
             <h3>Price: <span>{items.price}</span></h3>
             {items.size !=undefined&& items.quantity != undefined? <><h3>Size : <span>{items.size}</span></h3><h3>Quantity : <span>{items.quantity}</span></h3></>:""}
         </Link>
-        </div>
-    )
+        </div>:""}
+    </>)
 }
 export default Singleitem
