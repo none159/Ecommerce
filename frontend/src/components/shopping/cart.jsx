@@ -46,9 +46,9 @@ const Cartpage = ()=>{
         <Navbar/>
         <h2 className="item-category">Cart :</h2>
         <section className="items-section">
-        {useddata!=undefined && useddata!=[]?useddata.map((item)=>{
+        {useddata!=undefined?useddata.map((item)=>{
             return(
-        <Singleitem item={item} setdata={setuseddata}/>
+        <Singleitem item={item} setdata={setdata}/>
             )
         }):""}
         </section>
