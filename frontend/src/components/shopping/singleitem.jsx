@@ -4,9 +4,9 @@ import "../../assets/items.css"
 
 const Singleitem = (props)=>{
     const [items, setItems] = useState(props.item);
-
+    const [res,setres]=useState()
     const handleDelete=(id)=>{
-       if(JSON.parse(localStorage.getItem("cart"))){
+       if(!res){
        localStorage.setItem("cart",JSON.stringify(JSON.parse(localStorage.getItem("cart")).filter((item)=>item.id!=id)))
         setItems(JSON.parse(localStorage.getItem("cart")))
         props.setdata(items)
@@ -16,6 +16,23 @@ const Singleitem = (props)=>{
               props.setdata(newitems)
        }
 
+    }
+    const Tokencheck=async()=>{
+
+        const email = JSON.parse(sessionStorage.getItem("email"))
+        const token = JSON.parse(sessionStorage.getItem("token"))
+        if(email && token) {
+        await axios.post("https://ecommerce-pi-self.vercel.app/api/users/tokencheck",{
+            email:email,
+            token:token
+        }).then((response)=>{   
+          if(response.data!=undefined)
+              setres(response.data)
+    
+    }).catch((err)=>{
+        console.log(err)
+    })}
+    
     }
     return(
         <>
