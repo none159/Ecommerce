@@ -1,13 +1,15 @@
 import React,{useState} from "react";
-import { Link} from "react-router-dom";
+import { Link,useNavigate} from "react-router-dom";
 import "../../assets/items.css"
 
 const Singleitem = (props)=>{
     const [items, setItems] = useState(props.item);
+    const navigate = useNavigate()
     const handleDelete=(id)=>{
 localStorage.setItem("cart",JSON.stringify(JSON.parse(localStorage.getItem("cart")).filter((item)=>item.id!=id)))
         setItems(JSON.parse(localStorage.getItem("cart")))
         props.setdata(items)
+        navigate("/cart")
     }
     return(
      <div style={{paddingBottom:items.quantity!=undefined?"170px":""}}className="item" key={items.id}>
