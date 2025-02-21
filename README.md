@@ -28,5 +28,5 @@ All user data and transactions are securely stored to ensure a smooth and reliab
 
 1. **Clone the repository:**  
    ```sh
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+   git clone https://github.com/none159/Ecommerce.git
+   cd Ecommerce
