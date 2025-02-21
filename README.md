@@ -8,7 +8,7 @@ This is a **MERN-based eCommerce platform** designed for a seamless shopping exp
 🛍️ **Shopping cart functionality**  
 ❤️ **Favorites list for saving preferred products**  
 🔒 **Secure user authentication and signup**  
-💳 **Safe and hassle-free payment processing**  
+
 
 All user data and transactions are securely stored to ensure a smooth and reliable shopping experience.
 
